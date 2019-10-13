@@ -1,29 +1,54 @@
 # busy-beaver-project
 
-## Project setup
+
+# Developers
+To work on this project install:
+* NodeJS 12.11.1 (latest)
+* npm (gets installed with NodeJS)
+
+Clone this project, and switch to the right branch (see git workflow for more information.)
+
+Run `npm install` to install all necessary node packages.
+
+## Start server locally
+Start backend locally at http://localhost:3000 :
 ```
-npm install
+node index.js
+``` 
+
+Start frontend locally at http://localhost:8081 :
+```
+npm serve
 ```
 
-### Compiles and hot-reloads for development
+For more commands see the frontend/backend chapter
+
+## Frontend
+We are using Vue Js to develop the frontend. See https://vuejs.org/v2/guide/index.html#Getting-Started to learn more about it.
+
+### Frontend: important console commands
+Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Run your tests
+Run your tests
 ```
 npm run test
 ```
 
-### Lints and fixes files
+Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
+## Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# Backend
+We use expressJS for backend development.
