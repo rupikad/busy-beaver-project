@@ -6,7 +6,7 @@ To work on this project install:
 * NodeJS 12.11.1 (latest)
 * npm (gets installed with NodeJS)
 
-Clone this project, and switch to the right branch (see git workflow for more information.)
+Clone this project, and switch to the right branch (see our [git workflow](https://github.com/rupikad/busy-beaver-project/wiki/Git-workflow) for more information.)
 
 Run `npm install` to install all necessary node packages.
 
