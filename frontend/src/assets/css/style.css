@@ -1,0 +1,72 @@
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #000000;
+}
+
+p {
+    font-size: 16px;
+    color: red;
+}
+
+.mystyle {
+    color: green;
+}
+
+.margin {
+    margin-bottom: 45px;
+}
+
+.bg-1 {
+    background-color: #ffffff;
+    /* White */
+    color: #000000;
+    /* Black */
+}
+
+.bg-2 {
+    background-color: #bebebe;
+    /* Dark Blue */
+    color: #000000;
+}
+
+.bg-3 {
+    background-color: #bebebe;
+    /* White */
+    color: #000000;
+}
+
+.bg-4 {
+    background-color: #fa9e05;
+    /* Orange */
+    color: #ffffff;
+}
+
+.container-fluid {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    list-style-type: none;
+    border: 0;
+    background-color: #fa9e05;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+    color: #000000 !important;
+}
+
+.navbar-brand small {
+    display: block;
+    font-size: 14px;
+}
+
+.nav.navbar-nav a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
