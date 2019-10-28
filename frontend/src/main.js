@@ -9,9 +9,11 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 import BBMain from './components/Main.vue'
+import BBMap from './components/Map.vue'
 
 const routes = [
     { path: '/', component: BBMain, name: 'main' },
+    { path: '/map', component: BBMap, name: 'map' }
 ]
 
 const router = new VueRouter({

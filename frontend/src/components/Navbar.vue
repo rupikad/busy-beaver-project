@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                       
       </button>
-      <a class="navbar-brand" href="#">Busy Beaver <small>Never miss a bus</small> </a>
+      <router-link to="/map">Busy Beaver <small>Never miss a bus</small> </router-link>
         </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
