@@ -38,6 +38,8 @@ To learn MongoDB get started [here](https://docs.mongodb.com/manual/tutorial/get
 Import and run the collection of Beaver Bus API endpoints with one click:
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e3010f278049a098dce7)
 
+Link to download collection: https://www.getpostman.com/collections/e3010f278049a098dce7
+
 ## Frontend
 We are using Vue Js to develop the frontend. See https://vuejs.org/v2/guide/index.html#Getting-Started to learn more about it.
 
