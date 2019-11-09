@@ -10,27 +10,22 @@ let request = new XMLHttpRequest();
 
            for (var i = 0; i < GETroutes_response.data.length; i++){
                for (var j = 0; j < GETroutes_response.data[i].attributes.stops.length; j++){
-                   routes.push(GETroutes_response.data[i].attributes.stops[j].description)
+                routes.push(GETroutes_response.data[i].attributes.stops[j].description.trim())
                }
            }
+           // Sort alphabetical order
            routes.sort();
-
+           // Removing duplicate routes 
            let unique_routes = [...new Set(routes)];
-           console.log(unique_routes);
-
-           txt += "<div class = 'dropdown'>";
-           txt += "<button class = 'dropbtn'>" + "Select your location" + "</button> ";
-           txt += "<div class = 'dropdown-content'>"; 
-                 
+           // Removing misspelled route
+           let filtered_routes = unique_routes.filter(function(value, index, arr){
+               return value != 'Sacket Hall', 'undefined' 
+           })
            for (var i = 0; i < unique_routes.length; i++) {
-            //    for (var j = 0; j < GETroutes_response.data[i].attributes.stops.length; j++) {
-                    // txt += "<a href='#'>" + GETroutes_response.data[i].attributes.stops[j].description  + "</a>";
-                    txt += "<a href='#'>" + unique_routes[i] + "</a>";
-
-            // }
+               let value = `"${filtered_routes[i]}"`
+               txt += "<option value = "  + value + " >" + filtered_routes[i] + "</option>";
         }
- 
-        txt += "</div>";   
-    document.getElementById('routes_to_dropdown').innerHTML = txt; //list_routes;
+        console.log(txt);
+        document.getElementById('route_list').innerHTML = txt; //list_routes;
     }
-        request.send();
+    request.send();

@@ -4,24 +4,29 @@
         <meta charset="UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Hover Dropdown Example </title>
-        <link rel="stylesheet" href="style.css">
+        <!-- <title>Hover Dropdown Example </title> -->
     </head>
-    <body> 
-        <p id="routes_to_dropdown"></p>
-        <!-- <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class = "dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                <a href="#">Link 4</a>
-            </div>
-        </div> -->
-        <script src="routes_dropdown.js"></script>
-        <br><br>
-        <span id='result'>The next bus arrives at [07:00 AM] </span>
+    <body>
+        <h1>Select the route nearest to you</h1>
+        <select id = "route_list">
+            <script src="routes_dropdown.js"></script>
+        </select>
+        <p id = "route_result"></p>
 
-
+        <!-- <br><br> -->
+        <script>
+            function GetSelectedValue(){
+				var element = document.getElementById("route_list");
+				var result = element.options[element.selectedIndex].value;
+				document.getElementById("route_result").innerHTML = 'You selected: ' + result;
+			}
+			// function GetSelectedText(){
+			// 	var element = document.getElementById("route_list");
+			// 	var result = element.options[element.selectedIndex].text;
+			// 	document.getElementById("time_result").innerHTML = result;
+            // }                
+        </script>
+        <button type="button" onclick="GetSelectedValue()">Select this route</button>
+        <!-- <button type="button" onclick="GetSelectedText()">Get Selected Text</button> -->
     </body>
 </html>
