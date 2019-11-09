@@ -69,3 +69,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # Backend
 We use expressJS for backend development.
+
+## Busy Beaver API
+[API Docmumentation](https://github.com/rupikad/busy-beaver-project/wiki/BusyBeaver-API)
