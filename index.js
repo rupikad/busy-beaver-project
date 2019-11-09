@@ -38,9 +38,22 @@ app.get('/events', (req, res) => {
 app.post('/events', (req, res) => {
     let EventModel = require('./mongoose/models/event.js')
 
+    var eventTitle = req.body.eventTitle
+    var eventStartTime = req.body.eventStartTime
+    var eventStartDate = req.body.eventStartDate
+    var eventEndTime = req.body.eventEndTime
+    var eventEndDate = req.body.eventEndDate
+    var location = req.body.location
+    var recurring = req.body.recurring
+
     let event = new EventModel({
-        eventTitle: 'My supercool event!',
-        eventId: 2
+        eventTitle: eventTitle,
+        eventStartTime: eventStartTime,
+        eventStartDate: eventStartDate,
+        eventEndTime: eventEndTime,
+        eventEndDate: eventEndDate,
+        location: location,
+        recurring: recurring,
     })
 
     event.save()

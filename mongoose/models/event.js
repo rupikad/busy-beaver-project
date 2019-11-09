@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
-    eventId: { type: Number, required: true },
     eventTitle: { type: String, required: true },
     eventStartTime: Date,
     eventStartDate: Date,
