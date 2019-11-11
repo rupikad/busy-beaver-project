@@ -1,6 +1,6 @@
 <!--html here -->
 <template>
-    <div class="container">
+    <div class="container mx-1">
         <form>
             <!-- event title -->
             <div class="form-group row">
@@ -47,7 +47,7 @@
                     <input type="checkbox" class="custom-control-input" id="dayswitch" v-model="checked">
                     <label class="custom-control-label" for="dayswitch"> All day </label>
             </div>
-            <div class="form-group row">
+            <div class="form-group row d-flex justify-content-center">
                 <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </form>
