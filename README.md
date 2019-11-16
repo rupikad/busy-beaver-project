@@ -69,3 +69,23 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # Backend
 We use expressJS for backend development.
+
+<<<<<<< HEAD
+# Testing
+## JavaScript testing
+We're testing our application using [MochaJS](https://mochajs.org/) for Java Script testing. 
+Install Mocha globally on your machine: 
+```
+npm install -g mocha
+```
+Run tests with 
+```
+npm test
+```
+
+[ChaiJS](https://www.chaijs.com/) is used as assertion framework for testing purposes
+
+=======
+## Busy Beaver API
+[API Docmumentation](https://github.com/rupikad/busy-beaver-project/wiki/BusyBeaver-API)
+>>>>>>> 9fb692d90d933ec1f5c812508d267481fea8cd59
