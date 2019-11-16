@@ -18,38 +18,7 @@
     <!-- End home page content -->
 
     <!-- beaver bus content -->
-    <div id="floating-panel">
-        <b>Start: </b>
-        <select id="start">
-            <option value="chicago, il">Chicago</option>
-            <option value="st louis, mo">St Louis</option>
-            <option value="joplin, mo">Joplin, MO</option>
-            <option value="oklahoma city, ok">Oklahoma City</option>
-            <option value="amarillo, tx">Amarillo</option>
-            <option value="gallup, nm">Gallup, NM</option>
-            <option value="flagstaff, az">Flagstaff, AZ</option>
-            <option value="winona, az">Winona</option>
-            <option value="kingman, az">Kingman</option>
-            <option value="barstow, ca">Barstow</option>
-            <option value="san bernardino, ca">San Bernardino</option>
-            <option value="los angeles, ca">Los Angeles</option>
-        </select>
-        <b>End: </b>
-        <select id="end">
-            <option value="chicago, il">Chicago</option>
-            <option value="st louis, mo">St Louis</option>
-            <option value="joplin, mo">Joplin, MO</option>
-            <option value="oklahoma city, ok">Oklahoma City</option>
-            <option value="amarillo, tx">Amarillo</option>
-            <option value="gallup, nm">Gallup, NM</option>
-            <option value="flagstaff, az">Flagstaff, AZ</option>
-            <option value="winona, az">Winona</option>
-            <option value="kingman, az">Kingman</option>
-            <option value="barstow, ca">Barstow</option>
-            <option value="san bernardino, ca">San Bernardino</option>
-            <option value="los angeles, ca">Los Angeles</option>
-        </select>
-    </div>
+
     <div id="map" class="map">
     </div>
     <!-- end beaver bus content -->
@@ -67,7 +36,6 @@
 <script>
 import VNavbar from './VNavbar.vue';
 import gmapsInit from './gmaps.js';
-// import calculateAndDisplayRoute from './gmaps';
 
 
 export default {
@@ -80,9 +48,6 @@ export default {
             // get the maps from api
             const google = await gmapsInit();
 
-            let directionsService = new google.maps.DirectionsService();
-            let directionsRenderer = new google.maps.DirectionsRenderer();
-
             // create a new map with styling
             const map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 44.564535, lng: -123.277284}, // osu
@@ -90,13 +55,6 @@ export default {
                     mapTypeControl: true,
                     mapTypeId: 'roadmap',
                 });
-            directionsRenderer.setMap(map);
-
-            let onChangeHandler = function() {
-                calculateAndDisplayRoute(directionsService, directionsRenderer);
-            };
-            document.getElementById('start').addEventListener('change', onChangeHandler);
-            document.getElementById('end').addEventListener('change', onChangeHandler);
 
             // display the current position of user
             const displayPos =
@@ -148,21 +106,6 @@ export default {
     },
 }
 
-function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-    directionsService.route(
-        {
-            origin: {query: document.getElementById('start').value},
-            destination: {query: document.getElementById('end').value},
-            travelMode: 'DRIVING'
-        },
-        function(response, status) {
-            if (status === 'OK') {
-                directionsRenderer.setDirections(response);
-            } else {
-                window.alert('Directions request failed due to ' + status);
-            }
-        });
-}
 </script>
 
 <style scoped>
@@ -171,21 +114,6 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
         width: 100%;  /* The width is the width of the web page */
         margin: 0 auto;
     }
-
-    #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-    }
-
 </style>
 
 
