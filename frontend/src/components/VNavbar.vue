@@ -20,45 +20,43 @@
       </div>
     </div>
 
-  
-
-  <ul class="nav flex-column bg-white mb-0">
-    <li class="nav-item open">
-      <a href="" class="nav-link text-dark font-italic bg-light">
-                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                Home
-            </a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-dark font-italic bg-light">
-                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                Beaver Bus
-            </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-dark font-italic bg-light">
-                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                CTS Bus
-            </a>
-    </li>
-    <li class="nav-item">
-      <a href="#geolocation-and-campus-map" class="nav-link text-dark font-italic bg-light">
-                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                Campus map
-            </a>
-    </li>
-    <li class="nav-item">
-      <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-      <router-link class="nav-link text-dark font-italic bg-light" to="/eventform"> Add Event </router-link>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-dark font-italic bg-light">
-                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                Help
-            </a>
-    </li>
-  </ul>
-
+    <ul class="nav flex-column bg-white mb-0">
+      <li class="nav-item open">
+        <a href class="nav-link text-dark font-italic bg-light">
+          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+          <i class="material-icons">home </i> Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link text-dark font-italic bg-light">
+          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+          <i class="material-icons">directions_bus </i> 
+          Beaver Bus
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-dark font-italic bg-light">
+          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+          <i class="material-icons">directions_bus </i> 
+          Corvallis Bus
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#geolocation-and-campus-map" class="nav-link text-dark font-italic bg-light">
+          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+          <i class="material-icons">map </i> 
+          Campus map
+        </a>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link text-dark font-italic bg-light" to="/eventform">
+          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+          <i class="material-icons">favorite </i> 
+          Add Events
+        </router-link>
+      </li>
+      
+    </ul>
 </div>
 </template>
 
