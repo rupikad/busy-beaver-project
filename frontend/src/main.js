@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 import BBMain from './components/Main.vue'
-import BBMap from './components/Map.vue'
+import BBMap from './components/google_map.vue'
 
 const routes = [
     { path: '/', component: BBMain, name: 'main' },
