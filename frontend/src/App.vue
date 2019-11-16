@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <navbar></navbar>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <router-view></router-view>
+        <router-view></router-view>
     <bbfooter></bbfooter>
   </div>
 </template>
