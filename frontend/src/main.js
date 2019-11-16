@@ -10,17 +10,19 @@ Vue.use(VueRouter)
 
 import BBMain from './components/Main.vue'
 import BBMap from './components/Map.vue'
-import BBAddEvent from './components/AddEventForm.vue'
+import BBEventForm from './components/AddEventForm.vue'
 
 const routes = [
     { path: '/', component: BBMain, name: 'main' },
     { path: '/map', component: BBMap, name: 'map' },
-    { path: '/add-event', component: BBAddEvent, name: 'add_event' }
+    { path: '/eventform', component: BBEventForm, name: 'eventform' }
 ]
 
 const router = new VueRouter({
     routes // short for `routes: routes`
 })
+
+
 
 new Vue({
     router,
