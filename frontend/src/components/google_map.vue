@@ -18,13 +18,41 @@
     <!-- End home page content -->
 
     <!-- beaver bus content -->
+    <div id="floating-panel">
+        <b>Start: </b>
+        <select id="start">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+        </select>
+        <b>End: </b>
+        <select id="end">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+        </select>
+    </div>
     <div id="map" class="map">
-<!--        <p style="text-align: center;">-->
-<!--            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2842.52932598051!2d-123.28396408510947!3d44.5657372009622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c040bbc7dcf783%3A0xa31f68aa9f3c376a!2sLearning%20Innovation%20Center%2C%20165%20SW%20Sackett%20Pl%2C%20Corvallis%2C%20OR%2097331!5e0!3m2!1sen!2sus!4v1572207497625!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>-->
-<!--        </p>-->
     </div>
     <!-- end beaver bus content -->
-
 
 
     <!-- geolocation content -->
@@ -39,7 +67,7 @@
 <script>
 import VNavbar from './VNavbar.vue';
 import gmapsInit from './gmaps.js';
-
+// import calculateAndDisplayRoute from './gmaps';
 
 
 export default {
@@ -49,52 +77,54 @@ export default {
     },
     async mounted() {
         try {
+            // get the maps from api
             const google = await gmapsInit();
+
+            let directionsService = new google.maps.DirectionsService();
+            let directionsRenderer = new google.maps.DirectionsRenderer();
+
+            // create a new map with styling
             const map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 44.564535, lng: -123.277284}, // osu
                     zoom: 16,
                     mapTypeControl: true,
                     mapTypeId: 'roadmap',
                 });
+            directionsRenderer.setMap(map);
 
-            const createMarker =
-                function (marker) {
-                    return marker = new google.maps.Marker({
-                        // position: pos,
+            let onChangeHandler = function() {
+                calculateAndDisplayRoute(directionsService, directionsRenderer);
+            };
+            document.getElementById('start').addEventListener('change', onChangeHandler);
+            document.getElementById('end').addEventListener('change', onChangeHandler);
+
+            // display the current position of user
+            const displayPos =
+                function(position) {
+                    let pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+
+                    // center the map and cater to position
+                    let bounds = new google.maps.LatLngBounds();
+                    bounds.extend(pos);
+                    map.panToBounds(bounds);
+                    map.setCenter(bounds.getCenter());
+
+                    // create a marker of current location
+                    const marker = new google.maps.Marker({
+                        position: pos,
                         label: 'A',
                         title: 'My marker',
                         map: map,
                     });
                 };
 
-            const displayPos =
-                function(position) {
-                    let marker, current_pos;
-                    let pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                    };
-
-                    let bounds = new google.maps.LatLngBounds();
-                    bounds.extend(pos);
-                    map.panToBounds(bounds);
-                    map.setCenter(bounds.getCenter());
-                    current_pos = pos;
-
-                    if (current_pos === pos) {
-                        marker = createMarker(marker);
-                        marker.setPosition(pos);
-                    }
-                    else {
-                        marker.setPosition(pos);
-                        marker.setMap(map);
-                        current_pos = pos;
-                    }
-                };
-
+            // display error if location not available
             const displayError =
                 function() {
-                    handleLocationError(true, infoWindow, map.getCenter());
+                    navigator.handleLocationError(true, infoWindow, map.getCenter());
                 };
 
             // create new info window
@@ -103,14 +133,14 @@ export default {
             // Try HTML5 geolocation -- NOT google maps api
             if (navigator.geolocation) {
                 // passing in arguments in watchPosition -- moving vehicle
-                navigator.geolocation.watchPosition(displayPos, displayError, {
+                navigator.geolocation.getCurrentPosition(displayPos, displayError, {
                     enableHighAccuracy: true,
                     maximumAge: 10000,
                     timeout: 5000,
                 });
             } else {
                 // Browser doesn't support Geolocation
-                handleLocationError(false, infoWindow, map.getCenter());
+                navigator.handleLocationError(false, infoWindow, map.getCenter());
             }
         } catch (error) {
             console.error(error); // eslint-disable-line no-console
@@ -118,30 +148,42 @@ export default {
     },
 }
 
-// jquery stuff that i dont understand -->
-// <!--got it from here-> http://designm.ag/tutorials/building-vertical-tabbed-content-with-jquery/ -->
-/*function() {
-  // Sidebar toggle behavior
-  $('#sidebarCollapse').on('click', function() {
-    $('#sidebar, #content').toggleClass('active');
-  });
-}*/
-
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    directionsService.route(
+        {
+            origin: {query: document.getElementById('start').value},
+            destination: {query: document.getElementById('end').value},
+            travelMode: 'DRIVING'
+        },
+        function(response, status) {
+            if (status === 'OK') {
+                directionsRenderer.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+}
 </script>
 
 <style scoped>
-
-    /*html,*/
-    /*body {*/
-    /*    margin: 0;*/
-    /*    padding: 0;*/
-    /*    height: 100%;*/
-    /*}*/
-
     #map {
         height: 500px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
         margin: 0 auto;
+    }
+
+    #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
     }
 
 </style>
