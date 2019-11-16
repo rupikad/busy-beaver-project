@@ -1,5 +1,7 @@
 <!--html here -->
 <template>
+<div>
+ <v-navbar></v-navbar>
     <div class="d-flex justify-content-center">
         <form>
             <div class="form-group row">
@@ -74,13 +76,19 @@
 
         </form>
     </div>
+</div>
 </template>
 
 <script>
 import DatePick from 'vue-date-pick';
 import 'vue-date-pick/dist/vueDatePick.css';
+import VNavbar from './VNavbar.vue';
+
 export default {
-    components: {DatePick},
+    components: {
+        DatePick,
+        VNavbar
+        },
     data: () => ({
         date: '2019-01-01',
         datetime: '2019-01-01 15:30',

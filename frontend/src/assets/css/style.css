@@ -142,8 +142,13 @@ p.thicker {
     height: 180px;
 }
 
-.navbar a:hover {
+.navbar a {
     color: black;
+}
+
+.navbar a:hover {
+    color: grey;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -162,4 +167,9 @@ p.thicker {
 .nav.navbar-nav a {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.nav-logo{
+    flex-grow: 1;
+    text-align: center;
 }

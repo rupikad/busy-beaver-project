@@ -2,15 +2,16 @@
 <div>
     <div>
         <v-navbar></v-navbar>
-        <!-- Page content holder -->
+        <!--Page content holder-->
         <div class="page-content p-5" id="content">
-            <!-- Toggle button -->
-            <!--<button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4">
-                <i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small>
-            </button>-->
+            <!--Toggle button-->
+            <!--button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"-->
+                <!--i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small-->
+            <!--/button-->
 
-            <!-- title -->
+            <title>
             <h2 class="display-4 text-white">Beaver Bus</h2>
+            </title>
         </div>
         <div class="separator"></div>
     </div>
