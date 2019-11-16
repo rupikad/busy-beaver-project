@@ -14,11 +14,9 @@
         </div>
         <div class="separator"></div>
     </div>
-
     <!-- End home page content -->
 
     <!-- beaver bus content -->
-
     <div id="map" class="map">
     </div>
     <!-- end beaver bus content -->
@@ -36,7 +34,6 @@
 <script>
 import VNavbar from './VNavbar.vue';
 import gmapsInit from './gmaps.js';
-
 
 export default {
     name: 'google_map',
@@ -82,23 +79,20 @@ export default {
             // display error if location not available
             const displayError =
                 function() {
-                    navigator.handleLocationError(true, infoWindow, map.getCenter());
+                    handleLocationError(true, infoWindow, map.getCenter(), map);
                 };
 
             // create new info window
             const infoWindow = new google.maps.InfoWindow;
 
-            // Try HTML5 geolocation -- NOT google maps api
             if (navigator.geolocation) {
-                // passing in arguments in watchPosition -- moving vehicle
+                // actually getting the current location
                 navigator.geolocation.getCurrentPosition(displayPos, displayError, {
                     enableHighAccuracy: true,
-                    maximumAge: 10000,
-                    timeout: 5000,
                 });
             } else {
                 // Browser doesn't support Geolocation
-                navigator.handleLocationError(false, infoWindow, map.getCenter());
+                handleLocationError(false, infoWindow, map.getCenter(), map);
             }
         } catch (error) {
             console.error(error); // eslint-disable-line no-console
@@ -106,12 +100,20 @@ export default {
     },
 }
 
+  // handles location error
+  function handleLocationError(browserHasGeolocation, infoWindow, pos, map) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+                          'ERROR: Geolocation service failed.' :
+                          'ERROR: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+  }
 </script>
 
-<style scoped>
+<style>
     #map {
-        height: 500px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
+        height: 400px;
+        width: 50%;
         margin: 0 auto;
     }
 </style>

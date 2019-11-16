@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fd90bf3-8edd-4b40-b836-4f4cb90d93ea" name="Default Changelist" comment="" />
+    <list default="true" id="9fd90bf3-8edd-4b40-b836-4f4cb90d93ea" name="Default Changelist" comment="put google maps in maps page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Map.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="374">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#143#187#0" expanded="true" />
@@ -25,25 +29,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1835">
-              <caret line="116" column="7" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
+            <state relative-caret-position="132">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
               <folding>
-                <element signature="e#2588#2624#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding>
-                <element signature="e#266#308#0" expanded="true" />
+                <element signature="e#950#986#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,11 +61,11 @@
         <option value="$PROJECT_DIR$/frontend/src/gmaps.js" />
         <option value="$PROJECT_DIR$/frontend/src/utils/gmaps.js" />
         <option value="$PROJECT_DIR$/frontend/src/App.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/Map.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/Footer.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/gmaps.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/google_map.vue" />
         <option value="$PROJECT_DIR$/frontend/src/main.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Map.vue" />
       </list>
     </option>
   </component>
@@ -102,7 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,6 +137,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,6 +174,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Map.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/busy-beaver-project/frontend/src/components/Map.vue" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Map.vue" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -200,6 +202,7 @@
       <workItem from="1573080940049" duration="3545000" />
       <workItem from="1573518517047" duration="7665000" />
       <workItem from="1573699604401" duration="9837000" />
+      <workItem from="1573931545466" duration="2490000" />
     </task>
     <task id="LOCAL-00001" summary="put google maps in maps page">
       <created>1573876421270</created>
@@ -219,7 +222,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34223000" />
+    <option name="totallyTimeSpent" value="36908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,7 +237,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15421304" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15421304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -300,6 +303,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -419,7 +436,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="374">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#143#187#0" expanded="true" />
@@ -427,22 +444,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1835">
-          <caret line="116" column="7" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
+        <state relative-caret-position="308">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#2588#2624#0" expanded="true" />
+            <element signature="e#266#308#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="132">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
           <folding>
-            <element signature="e#266#308#0" expanded="true" />
+            <element signature="e#950#986#0" expanded="true" />
           </folding>
         </state>
       </provider>
