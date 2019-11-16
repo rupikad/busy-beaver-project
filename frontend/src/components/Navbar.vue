@@ -1,19 +1,9 @@
 <template>
 <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                       
-      </button>
-      <router-link to="/map">Busy Beaver <small>Never miss a bus</small> </router-link>
-        </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">LOGIN</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
-    </div>
+  <router-link to="/" class="nav-logo"><h2>Busy Beaver <small>Never miss a bus</small></h2> </router-link>
+  <div class="nav-links">
+    <router-link to="/map">Go to Map</router-link>
+    <!--router-link to="/">CONTACT</router-link-->
   </div>
 </nav>
 </template>
@@ -21,5 +11,8 @@
 <script>
 export default {
     name: 'navbar',
+    data:{
+      displayNavbar: false
+    }
 }
 </script>
