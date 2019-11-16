@@ -83,7 +83,6 @@ body {
 }
 
 p {
-    
     font-size: 16px;
     color: black;
 }
@@ -91,7 +90,7 @@ p {
 p.thicker {
     font-weight: 900;
     font-size: large
-  }
+}
 
 .mystyle {
     color: green;
@@ -132,17 +131,27 @@ p.thicker {
 }
 
 .navbar {
+    display: flex;
     list-style-type: none;
     border: 0;
     background-color: #fa9e05;
     border-radius: 0;
-    margin-bottom: 0;
-    font-size: 14px;
+    margin-bottom: 40px;
+    font-size: 16px;
     letter-spacing: 5px;
+    height: 180px;
 }
 
-.navbar-nav li a:hover {
-    color: #000000 !important;
+.navbar a:hover {
+    color: black;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    margin: 0 5px 0 5px;
 }
 
 .navbar-brand small {
