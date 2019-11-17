@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <script src="require.js"></script> -->
+    </head>
+    <body>
+        <h1>Hey there, Busy Beaver!</h1>
+        <label for = "route-select">Select a stop:</label>
+        <select id = "route_list">
+            <script src="integrating_API_callback.js"></script>
+        </select>
+
+        <p id = "routeName_onclick"></p>
+
+        <script>
+			function GetSelectedText(){
+				var element = document.getElementById("route_list");
+                var result = element.options[element.selectedIndex].text;
+                var arrival_time = element.options[element.selectedIndex].value; 
+                document.getElementById("routeName_onclick").innerHTML = 
+                    'You are at ' + result + ' . The next available bus arrives at ' + arrival_time + ' AM.';
+            }  
+           
+        </script>
+        <button type="button" onclick="GetSelectedText()">Submit</button>
+    </body>
+</html>
