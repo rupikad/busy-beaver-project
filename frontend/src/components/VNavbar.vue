@@ -42,11 +42,11 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#geolocation-and-campus-map" class="nav-link text-dark font-italic bg-light">
+    <router-link class="nav-link text-dark font-italic bg-light" to="/map">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
           <i class="material-icons">map </i> 
           Campus map
-        </a>
+        </router-link>
       </li>
       <li class="nav-item">
         <router-link class="nav-link text-dark font-italic bg-light" to="/eventform">
