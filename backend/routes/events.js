@@ -3,7 +3,7 @@ var request = require('request');
 var router = express.Router();
 
 var eventsGET = function(req, res) {
-    let EventModel = require('./mongoose/models/event.js');
+    let EventModel = require('../../mongoose/models/event.js');
     EventModel.find({})
         .then(doc => {
             res.status(200);
@@ -18,7 +18,7 @@ var eventsGET = function(req, res) {
 }
 
 var eventsPOST = function(req, res) {
-    let EventModel = require('./mongoose/models/event.js')
+    let EventModel = require('../../mongoose/models/event.js');
 
     var eventTitle = req.body.eventTitle
     var eventStartTime = req.body.eventStartTime
