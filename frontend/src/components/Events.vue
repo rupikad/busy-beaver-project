@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import bbconfig from './../bbconfig.js'
-var bbAPI = bbconfig.bbAPI
 
 export default {
     name: 'events',
