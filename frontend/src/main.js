@@ -12,11 +12,15 @@ Vue.use(VueRouter)
 import BBMain from './components/Main.vue'
 import BBMap from './components/Map.vue'
 import BBEventForm from './components/AddEventForm.vue'
+import BBNewFeature from './components/new_feature.vue'
+import BBPageNotFound from './components/page_not_found.vue'
 
 const routes = [
     { path: '/', component: BBMain, name: 'main' },
     { path: '/map', component: BBMap, name: 'map' },
-    { path: '/eventform', component: BBEventForm, name: 'eventform' }
+    { path: '/eventform', component: BBEventForm, name: 'eventform' },
+    { path: '/newfeature', component: BBNewFeature, name: 'newfeature'},
+    { path: '*', component: BBPageNotFound, name: 'pagenotfound'}
 ]
 
 const router = new VueRouter({

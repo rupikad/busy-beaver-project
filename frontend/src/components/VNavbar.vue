@@ -28,18 +28,22 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href class="nav-link text-dark font-italic bg-light">
+        <router-link class="nav-link text-dark font-italic bg-light" to="/newfeature">
+        <!-- <a href class="nav-link text-dark font-italic bg-light"> -->
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
           <i class="material-icons">directions_bus </i> 
           Beaver Bus
-        </a>
+        </router-link>
+        <!-- </a> -->
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic bg-light">
+        <router-link class="nav-link text-dark font-italic bg-light" to="/newfeature">
+        <!-- <a href="#" class="nav-link text-dark font-italic bg-light"> -->
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
           <i class="material-icons">directions_bus </i> 
           Corvallis Bus
-        </a>
+        </router-link>
+        <!-- </a> -->
       </li>
       <li class="nav-item">
         <a href="#geolocation-and-campus-map" class="nav-link text-dark font-italic bg-light">
