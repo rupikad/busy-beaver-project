@@ -20,7 +20,9 @@
       </div>
     </div>
 
-    <ul class="nav flex-column bg-white mb-0">
+    <div class="dropdown-divider"></div>
+
+    <ul class="nav flex-column bg-white mb-0 py-4">
       <li class="nav-item open">
         <a href class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
@@ -57,6 +59,11 @@
       </li>
       
     </ul>
+    <div class="dropdown-divider pt-5"></div>
+    <div class="d-flex justify-content-around">
+      <button type="button" class="btn btn-primary">FAQs</button> 
+      <button type="button" class="btn btn-primary">Logout</button> 
+    </div>
 </div>
 </template>
 
@@ -65,3 +72,7 @@ export default {
   name: "v-navbar"
 };
 </script>
+
+<style scoped>
+
+</style>
