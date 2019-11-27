@@ -22,34 +22,75 @@
     <div id="floating-panel">
         <b>Start: </b>
         <select id="start">
-<!--            <option value="portland, or">PDX</option>-->
-            <option value="{lat: 44.564535, lng: -123.277284}">PDX</option>
-            <option value="st louis, mo">St Louis</option>
-            <option value="joplin, mo">Joplin, MO</option>
-            <option value="oklahoma city, ok">Oklahoma City</option>
-            <option value="amarillo, tx">Amarillo</option>
-            <option value="gallup, nm">Gallup, NM</option>
-            <option value="flagstaff, az">Flagstaff, AZ</option>
-            <option value="winona, az">Winona</option>
-            <option value="kingman, az">Kingman</option>
-            <option value="barstow, ca">Barstow</option>
-            <option value="san bernardino, ca">San Bernardino</option>
-            <option value="los angeles, ca">Los Angeles</option>
+            <option value="3450 SW Campus Way, Corvallis, OR 97331">Forage Seed Research Center</option>
+            <option value="109 Crop Science Building, 3050 SW Campus Way, Corvallis, OR 97331">Crop and Soil Science</option>
+            <option value="310 SW Weatherford Pl, Corvallis, OR 97331">Buxton Hall</option>
+            <option value="Weatherford Hall, 300 SW 26th St, Corvallis, OR 97331">Weatherford Hall</option>
+            <option value="660 SW 26th St, Corvallis, OR 97331">Gill Coliseum</option>
+            <option value="Southwest Ralph Miller Lane, Corvallis, OR">Ralph Miller Lane</option>
+            <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Traux Northwest</option>
+            <option value="Radiation Center, Southwest Jefferson Way, Corvallis, OR">Radiation Center</option>
+            <option value="450 SW 30th St, Corvallis, OR 97331">Dryden Hall</option>
+            <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax West</option>
+            <option value="660 SW 26th St, Corvallis, OR 97331">Reser Stadium </option>
+            <option value="875 SW 26th St, Corvallis, OR 97331">LaSells Stewart Center</option>
+            <option value="663 SW 26th St, Corvallis, OR 97331">Beaver Store</option>
+            <option value="DxRC, 425 SW 26th St, Corvallis, OR 97331">Dixion Recreation</option>
+            <option value="Austin Hall, Southwest Jefferson Way, Corvallis, OR">Austin Hall</option>
+            <option value="2901 SW Jefferson Way, Corvallis, OR 97331">Sackett Hall</option>
+            <option value="Oak Creek Building, Southwest Western Boulevard, Corvallis, OR">Oak Creek Building</option>
+            <option value="391 SW 30th St, Corvallis, OR 97331">West Hall</option>
+            <option value="2500 SW Western Blvd, Corvallis, OR 97333">Hilton Garden Inn</option>
+            <option value="1600 SW Western Blvd, Corvallis, OR 97333">University Plaza</option>
+            <option value="SW 15th St & SW Western Blvd, Corvallis, OR">16th and A Ave</option>
+            <option value="1420 SW Jefferson Way, Corvallis, OR 97331">Callahan Hall</option>
+            <option value="201 SW Waldo Pl, Corvallis, OR 97331">Valley Library</option>
+            <option value="2251 SW Jefferson Way, Corvallis, OR 97331">Student Experience Center</option>
+            <option value="SW 15th St & SW Western Blvd, Corvallis, OR">15th and A Ave</option>
+            <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax Indoor Practice Facility</option>
+            <option value="Milam Hall, Southwest Campus Way, Corvallis, OR">Milam Hall</option>
+            <option value="Gilkey Hall, Southwest Waldo Place, Corvallis, OR">Gilkey Hall</option>
+            <option value="Kearney Hall, Southwest Campus Way, Corvallis, OR">Kearney Hall</option>
+            <option value="Kerr Administration Building, Southwest Jefferson Way, Corvallis, OR">Kerr Admin</option>
+            <option value="Adams Hall, Southwest 15th Street, Corvallis, OR">Adams Hall</option>
+            <option value="1701 SW Western Blvd, Corvallis, OR 97331">ILLC</option>
+            <option value="SW Western Blvd & SW 26th St, Corvallis, OR">Western</option>
         </select>
         <b>End: </b>
         <select id="end">
-            <option value="chicago, il">Chicago</option>
-            <option value="st louis, mo">St Louis</option>
-            <option value="joplin, mo">Joplin, MO</option>
-            <option value="oklahoma city, ok">Oklahoma City</option>
-            <option value="amarillo, tx">Amarillo</option>
-            <option value="gallup, nm">Gallup, NM</option>
-            <option value="flagstaff, az">Flagstaff, AZ</option>
-            <option value="winona, az">Winona</option>
-            <option value="kingman, az">Kingman</option>
-            <option value="barstow, ca">Barstow</option>
-            <option value="san bernardino, ca">San Bernardino</option>
-            <option value="los angeles, ca">Los Angeles</option>
+            <option value="3450 SW Campus Way, Corvallis, OR 97331">Forage Seed Research Center</option>
+            <option value="109 Crop Science Building, 3050 SW Campus Way, Corvallis, OR 97331">Crop and Soil Science</option>
+            <option value="310 SW Weatherford Pl, Corvallis, OR 97331">Buxton Hall</option>
+            <option value="Weatherford Hall, 300 SW 26th St, Corvallis, OR 97331">Weatherford Hall</option>
+            <option value="660 SW 26th St, Corvallis, OR 97331">Gill Coliseum</option>
+            <option value="Southwest Ralph Miller Lane, Corvallis, OR">Ralph Miller Lane</option>
+            <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Traux Northwest</option>
+            <option value="Radiation Center, Southwest Jefferson Way, Corvallis, OR">Radiation Center</option>
+            <option value="450 SW 30th St, Corvallis, OR 97331">Dryden Hall</option>
+            <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax West</option>
+            <option value="660 SW 26th St, Corvallis, OR 97331">Reser Stadium </option>
+            <option value="875 SW 26th St, Corvallis, OR 97331">LaSells Stewart Center</option>
+            <option value="663 SW 26th St, Corvallis, OR 97331">Beaver Store</option>
+            <option value="DxRC, 425 SW 26th St, Corvallis, OR 97331">Dixion Recreation</option>
+            <option value="Austin Hall, Southwest Jefferson Way, Corvallis, OR">Austin Hall</option>
+            <option value="2901 SW Jefferson Way, Corvallis, OR 97331">Sackett Hall</option>
+            <option value="Oak Creek Building, Southwest Western Boulevard, Corvallis, OR">Oak Creek Building</option>
+            <option value="391 SW 30th St, Corvallis, OR 97331">West Hall</option>
+            <option value="2500 SW Western Blvd, Corvallis, OR 97333">Hilton Garden Inn</option>
+            <option value="1600 SW Western Blvd, Corvallis, OR 97333">University Plaza</option>
+            <option value="SW 15th St & SW Western Blvd, Corvallis, OR">16th and A Ave</option>
+            <option value="1420 SW Jefferson Way, Corvallis, OR 97331">Callahan Hall</option>
+            <option value="201 SW Waldo Pl, Corvallis, OR 97331">Valley Library</option>
+            <option value="2251 SW Jefferson Way, Corvallis, OR 97331">Student Experience Center</option>
+            <option value="SW 15th St & SW Western Blvd, Corvallis, OR">15th and A Ave</option>
+            <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax Indoor Practice Facility</option>
+            <option value="Milam Hall, Southwest Campus Way, Corvallis, OR">Milam Hall</option>
+            <option value="Gilkey Hall, Southwest Waldo Place, Corvallis, OR">Gilkey Hall</option>
+            <option value="Kearney Hall, Southwest Campus Way, Corvallis, OR">Kearney Hall</option>
+            <option value="Kerr Administration Building, Southwest Jefferson Way, Corvallis, OR">Kerr Admin</option>
+            <option value="Adams Hall, Southwest 15th Street, Corvallis, OR">Adams Hall</option>
+            <option value="1701 SW Western Blvd, Corvallis, OR 97331">ILLC</option>
+            <option value="SW Western Blvd & SW 26th St, Corvallis, OR">Western</option>
         </select>
     </div>
 
@@ -71,6 +112,7 @@
 import VNavbar from './VNavbar.vue';
 import gmapsInit from './gmaps.js';
 
+/* eslint-disable */
 export default {
     name: 'google_map',
     components: {
@@ -99,7 +141,6 @@ export default {
             };
             document.getElementById('start').addEventListener('change', onChangeHandler);
             document.getElementById('end').addEventListener('change', onChangeHandler);
-
 
             // display the current position of user
             const displayPos =
@@ -160,10 +201,9 @@ export default {
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     directionsService.route(
         {
-            // origin: {query: document.getElementById('start').value},
-            origin: document.getElementById('start').value,
+            origin: {query: document.getElementById('start').value},
             destination: {query: document.getElementById('end').value},
-            travelMode: 'DRIVING'
+            travelMode: 'WALKING',
         },
         function(response, status) {
             if (status === 'OK') {
@@ -173,7 +213,6 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
             }
         });
 }
-
 </script>
 
 <style>

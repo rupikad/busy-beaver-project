@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fd90bf3-8edd-4b40-b836-4f4cb90d93ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/GETroutes_response.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/test/App.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Map.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/display_json_data/json_data_to_table/script_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/display_json_data/json_data_to_table/script_table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,22 +17,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1298">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="88">
+              <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+              <folding>
+                <element signature="e#9681#9717#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/GETroutes_response.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="9484" selection-start-column="9484" selection-end-column="9484" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/parse_JSON.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1122">
+            <state relative-caret-position="1606">
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/gmaps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -63,13 +80,13 @@
         <option value="$PROJECT_DIR$/frontend/src/utils/gmaps.js" />
         <option value="$PROJECT_DIR$/frontend/src/App.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/Footer.vue" />
-        <option value="$PROJECT_DIR$/frontend/src/components/gmaps.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/google_map.vue" />
         <option value="$PROJECT_DIR$/frontend/src/main.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/Map.vue" />
         <option value="$PROJECT_DIR$/frontend/src/components/display_json_data/json_data_to_table/GETroutes_response.json" />
         <option value="$PROJECT_DIR$/frontend/src/components/display_json_data/json_data_to_table/script_table.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/gmaps.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Map.vue" />
       </list>
     </option>
   </component>
@@ -127,32 +144,6 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="display_json_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="display_json_data" type="462c0819:PsiDirectoryNode" />
-              <item name="json_bus_routes_dropdown_btn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="display_json_data" type="462c0819:PsiDirectoryNode" />
-              <item name="json_data_to_table" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,7 +222,9 @@
       <workItem from="1574225829603" duration="2751000" />
       <workItem from="1574479721047" duration="11520000" />
       <workItem from="1574661546248" duration="2106000" />
-      <workItem from="1574664332085" duration="2839000" />
+      <workItem from="1574664332085" duration="3632000" />
+      <workItem from="1574731529212" duration="14327000" />
+      <workItem from="1574822180509" duration="5510000" />
     </task>
     <task id="LOCAL-00001" summary="put google maps in maps page">
       <created>1573876421270</created>
@@ -247,11 +240,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573881568389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- added direction floating nav bar to map&#10;- copied JSON files to front/component&#10;- parsed JSON into routes &amp; direction arrays">
+      <created>1574667454241</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574667454241</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56002000" />
+    <option name="totallyTimeSpent" value="76632000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,7 +353,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="put google maps in maps page" />
-    <option name="LAST_COMMIT_MESSAGE" value="put google maps in maps page" />
+    <MESSAGE value="- added direction floating nav bar to map&#10;- copied JSON files to front/component&#10;- parsed JSON into routes &amp; direction arrays" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added direction floating nav bar to map&#10;- copied JSON files to front/component&#10;- parsed JSON into routes &amp; direction arrays" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/dist/img/logo.82b9c7a5.png">
@@ -434,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/gmaps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -458,13 +452,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/test/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/test/App.test.js" />
     <entry file="file://$PROJECT_DIR$/frontend/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -512,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/display_json_data/json_data_to_table/script_table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/display_json_data/json_data_to_table/json2tbl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -526,25 +507,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/GETroutes_response.json">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/display_json_data/json_data_to_table/script_table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9495" selection-start-column="9495" selection-end-column="9495" />
+        <state relative-caret-position="198">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/gmaps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1298">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/GETroutes_response.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9484" selection-start-column="9484" selection-end-column="9484" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/parse_JSON.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
+        <state relative-caret-position="1606">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+          <folding>
+            <element signature="e#9681#9717#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,13 +1,15 @@
 // Script to parse the routes JSON file
 // into direction object and route object
 
-/* eslint-disable */
+// import CloneDeep from 'lodash';
+// import cloneDeep from 'lodash/cloneDeep';
 
+/* eslint-disable */
 const routes_response = require("./GETroutes_response.json");
-const clonedeep = require('lodash/clonedeep');
+const cloneDeep = require('lodash/cloneDeep');
 
 function parse_routes() {
-    // intialize route list array and
+    // initialize route list array and
     // single route object
     let route_list = [];
     let single_route = {};
@@ -21,7 +23,7 @@ function parse_routes() {
         // append stops array to route object
         // make deep copy and push to array
         single_route = Object.assign({"stops": stops}, single_route);
-        const copy_route = clonedeep(single_route);
+        const copy_route = cloneDeep(single_route);
         route_list.push(copy_route);
 
         // reset single_route object
@@ -29,7 +31,6 @@ function parse_routes() {
         delete single_route["stops"];
     }
 
-    // console.log(route_list[0].stops.length) // eslint-disable-line no-console
     return route_list;
 }
 
@@ -54,7 +55,7 @@ function parse_stops(route_list){
                 single_stop["lng"] = stops[j].longitude;
 
                 // deep copy stop into array
-                const copy_stop = clonedeep(single_stop);
+                const copy_stop = cloneDeep(single_stop);
                 stop_list.push(copy_stop);
                 delete single_stop["name"];
                 delete single_stop["lat"];
@@ -67,4 +68,6 @@ function parse_stops(route_list){
 
 const route_list = parse_routes();
 const stop_list = parse_stops(route_list);
+console.log(stop_list);
 
+// export default stop_list;
