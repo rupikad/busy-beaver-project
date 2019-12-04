@@ -159,7 +159,4 @@ export default {
 </script>
 
 <style scoped>
-    .btn-primary {
-        background-color: #DC4405;
-    }
 </style>

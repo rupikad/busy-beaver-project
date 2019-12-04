@@ -9,9 +9,9 @@
                 <!--i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small-->
             <!--/button-->
 
-            <title>
+           
             <h2 class="display-4 text-white">Beaver Bus</h2>
-            </title>
+           
         </div>
         <div class="separator"></div>
     </div>
