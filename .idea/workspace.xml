@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fd90bf3-8edd-4b40-b836-4f4cb90d93ea" name="Default Changelist" comment="">
+    <list default="true" id="9fd90bf3-8edd-4b40-b836-4f4cb90d93ea" name="Default Changelist" comment="put google maps in maps page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Map.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,31 +20,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+            <state relative-caret-position="220">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
               <folding>
-                <element signature="e#9681#9717#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/GETroutes_response.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9484" selection-start-column="9484" selection-end-column="9484" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/parse_JSON.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1606">
-              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#7626#7662#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -251,7 +232,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76632000" />
+    <option name="totallyTimeSpent" value="77134000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,10 +521,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+        <state relative-caret-position="220">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
           <folding>
-            <element signature="e#9681#9717#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#7626#7662#0" expanded="true" />
           </folding>
         </state>
       </provider>
