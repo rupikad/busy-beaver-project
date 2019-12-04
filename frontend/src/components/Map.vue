@@ -148,8 +148,8 @@
                         // create a marker of current location
                         const marker = new google.maps.Marker({
                             position: pos,
-                            label: 'A',
-                            title: 'My marker',
+                            // label: '!',
+                            title: 'You are here!',
                             map: map,
                         });
                     };

@@ -19,7 +19,11 @@
       <div class="lg col-md-8">
         <div class="sm col-sm-12" align="left">
           <h2 class="highlight">What's a Busy Beaver?</h2>
-          <p></p>
+          <p>
+            The Busy Beaver application aims to integrate student class schedules with the Beaver Bus schedule. We are offering a one stop destination for students to synch up their calendars with the Beaver Bus so that they will get to class on time, move around on campus, and get the most out of this transportation service.
+
+            Our application is an innovative take on traditional transit system applications because it adds the personalized touch of adding a student's schedule and calendar. This way the user doesn't have to go back and forth on apps in order to make sure they reach their destination on time. This application also takes care of updated events and resolves any scheduling changes in real time, and alerts the user of updated times to fit their schedule.
+          </p>
           <p class="lead">"Missed your class because you were confused about the bus schedules"?</p>
 
           <p

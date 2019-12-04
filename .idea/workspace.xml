@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9fd90bf3-8edd-4b40-b836-4f4cb90d93ea" name="Default Changelist" comment="put google maps in maps page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Map.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,15 +17,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="-242">
+              <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#7626#7662#0" expanded="true" />
+                <element signature="e#8672#8708#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Main.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#2806#2839#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,6 +81,7 @@
         <option value="$PROJECT_DIR$/frontend/src/components/gmaps.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/Map.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Main.vue" />
       </list>
     </option>
   </component>
@@ -131,6 +145,50 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="busy-beaver-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="busy-beaver-project" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="display_json_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,7 +290,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77134000" />
+    <option name="totallyTimeSpent" value="78927000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -245,9 +303,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49722221" weight="0.14626391" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49722221" weight="0.15421304" />
       <window_info id="Structure" order="1" sideWeight="0.50277776" side_tool="true" weight="0.16136725" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -261,7 +318,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32960895" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007949" side_tool="true" weight="0.94413406" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49920508" weight="0.94413406" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49920508" visible="true" weight="0.94413406" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -366,9 +423,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/display_json_data/script_table.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Main.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Navbar.vue">
@@ -521,12 +575,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="-242">
+          <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#7626#7662#0" expanded="true" />
+            <element signature="e#8672#8708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Main.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2806#2839#0" expanded="true" />
           </folding>
         </state>
       </provider>
