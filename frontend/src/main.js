@@ -21,7 +21,8 @@ const routes = [
     { path: '/map', component: BBMap, name: 'map' },
     { path: '/eventform', component: BBEventForm, name: 'eventform' },
     { path: '/newfeature', component: BBNewFeature, name: 'newfeature' },
-    { path: '*', component: BBPageNotFound, name: 'pagenotfound' } { path: '/events', component: BBEvents, name: 'events' }
+    { path: '*', component: BBPageNotFound, name: 'pagenotfound' },
+    { path: '/events', component: BBEvents, name: 'events' }
 ]
 
 const router = new VueRouter({
