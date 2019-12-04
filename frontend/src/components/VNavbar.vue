@@ -76,8 +76,8 @@ export default {
 
 <style scoped>
 .beaverlogo {
-  height: 20px;
-  width: 30px;
+  height: 1.25rem;
+  width: 1.85rem;
 }
 
 </style>
