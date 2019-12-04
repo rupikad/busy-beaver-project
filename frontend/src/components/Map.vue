@@ -108,7 +108,7 @@ export default {
 .navbar{
     background-color: #dc4405;
 }
-#map {
+.map {
   height: 400px;
   width: 80%;
   margin: 30px auto;
