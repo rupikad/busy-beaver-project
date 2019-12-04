@@ -27,6 +27,8 @@ var eventsPOST = function(req, res) {
     var eventEndDate = req.body.eventEndDate
     var location = req.body.location
     var recurring = req.body.recurring
+    var allDay = req.body.allDay
+    var notes = req.body.notes
 
     let event = new EventModel({
         eventTitle: eventTitle,
@@ -36,6 +38,8 @@ var eventsPOST = function(req, res) {
         eventEndDate: eventEndDate,
         location: location,
         recurring: recurring,
+        allDay: allDay,
+        notes: notes
     })
 
     event.save()
