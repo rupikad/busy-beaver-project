@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <navbar></navbar>
+    <div>
+  
+    </div>
+   
         <router-view></router-view>
-    <bbfooter></bbfooter>
+    
   </div>
 </template>
 

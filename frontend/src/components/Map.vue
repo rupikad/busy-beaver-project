@@ -1,19 +1,22 @@
 <template>
-<div>
-    <div>
-        <v-navbar></v-navbar>
-        <!--Page content holder-->
-        <div class="page-content p-5" id="content">
-            <!--Toggle button-->
-            <!--button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"-->
-                <!--i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small-->
-            <!--/button-->
+  <div>
+    <div style="display:flex">
+      <v-navbar></v-navbar>
+      <!--Page content holder-->
+      <div class="page-content" id="content">
+        <nav class="navbar navbar-dark custom-nav" style="margin-bottom:0">
+          <!-- Navbar content -->
+          <h2>Busy Beaver</h2>
+        </nav>
 
-           
-            <h2 class="display-4 text-white">Beaver Bus</h2>
-           
+        <div id="map" class="map"></div>
+        <!-- end beaver bus content -->
+
+        <!-- geolocation content -->
+        <div id="geolocation-and-campus-map" class="contentblock hidden">
+          <!-- <p>geolocation</p> -->
         </div>
-        <div class="separator"></div>
+      </div>
     </div>
     <!-- End home page content -->
 
@@ -98,21 +101,14 @@
     </div>
     <!-- end beaver bus content -->
 
-
-    <!-- geolocation content -->
-    <div id="geolocation-and-campus-map" class="contentblock hidden">
-        <p>geolocation</p>
-    </div>
     <!-- end geolocation content -->
-
-</div>
+  </div>
 </template>
 
 <script>
 import VNavbar from './VNavbar.vue';
 import gmapsInit from './gmaps.js';
 
-/* eslint-disable */
 export default {
     name: 'google_map',
     components: {
@@ -214,7 +210,6 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
         });
 }
 </script>
-
 <style>
     #map {
         height: 400px;
@@ -236,7 +231,24 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
         padding-left: 10px;
     }
 
+.navbar{
+    background-color: #dc4405;
+}
+#map {
+  height: 400px;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.custom-nav {
+  height: auto;
+  color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+}
 </style>
+
+
 
 
 
