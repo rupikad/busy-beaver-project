@@ -13,9 +13,7 @@ var getAuthToken = function(path, callback){
                     response = JSON.parse(this.responseText);
                     callback(response);
                 }
-                // return response
             }
-    // return response
 }
 
 var getArrivalTime = function(path, token, callback){
@@ -52,6 +50,10 @@ var getRouteData = function(path, token, callback){
         }
 }
 
+// Callback function to be used by both endpoints
+// This way, data from both can be integrated into a single object
+// that can be used to display data in the vue component
+
 function myDataCallback(data){
     var routes = [];
     var stops = [];
@@ -59,6 +61,7 @@ function myDataCallback(data){
     var etaStops = [];
     var etaData = []; 
 
+// Discriminating between the two json objects   
     if (data !== 'undefined' && data.data.length > 10){ 
         var eta_data = data;
         for (var i = 0; i < Object.keys(eta_data).length; i++){
@@ -72,7 +75,8 @@ function myDataCallback(data){
                 "eta" : etaData[i]
             }
         }
-        // console.log(etaObject)
+        // The resulting etaObject is undefined 
+
     } else if (data!== 'undefined' && data.data.length < 10) {
         var route_data = data;
         for (i = 0; i < Object.keys(route_data.data).length; i++){
@@ -100,11 +104,12 @@ function myDataCallback(data){
                 routesObject[i].attribues.eta.push('7:00 AM');            
             }
         }
+        // Trying to link data from both API endpoints using the stopID 
         // if (routesObject.attribues.stopID == etaObject.stopID) {
         //     routesObject.attribues.eta = etaObject.eta
-        // }
+        // } 
     }
-        // INSERT VUE  STUFF HERE // 
+        // Start html code // 
         var txt = "";
 
         txt += "<table id='table' class= 'table table-sm' align='center' border='1px'>";        
@@ -125,17 +130,17 @@ function myDataCallback(data){
          }
      }
      txt += "</table>"   
-     document.getElementById('GETroutes_response').innerHTML = txt; //list_routes;
+     document.getElementById('GETroutes_response').innerHTML = txt; // Display in .vue component
     }
-
+    // Callback function to generate token used in API calls 
     function myTokenCallback(response){
         var token; 
-        if (response != 'undefined'){ //  && arrival_data
+        if (response != 'undefined'){ 
             token = response.access_token; 
-            // console.log(token)
         }
         getArrivalTime("https://cors-anywhere.herokuapp.com/https://api.oregonstate.edu/v1/beaverbus/arrivals", token, myDataCallback); // myArrivalsCallback);
         getRouteData("https://cors-anywhere.herokuapp.com/https://api.oregonstate.edu/v1/beaverbus/routes", token, myDataCallback); //myRoutesCallback);
 
     }
+    
 module.exports.getAuthToken = getAuthToken("https://cors-anywhere.herokuapp.com/https://api.oregonstate.edu/oauth2/token", myTokenCallback);
