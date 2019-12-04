@@ -81,3 +81,22 @@ export default {
 }
 
 </style>
+
+<style>
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+background-color: #dc4405;
+border:none;
+
+  }
+
+  .btn-primary{
+    background-color:#dc4405;
+    border-color:#DC4405;
+  }
+
+  .btn-primary:hover{
+    background-color:white;
+    color:#dc4405;
+    border:1px solid #dc4405;
+    }
+</style>
