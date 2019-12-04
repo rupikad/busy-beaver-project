@@ -9,7 +9,8 @@ var eventSchema = new Schema({
     eventEndDate: Date,
     location: String,
     recurring: Boolean,
-    notes: String,
+    allDay: Boolean,
+    notes: String
 });
 
 eventSchema.methods.eventToString = function() {
