@@ -1,63 +1,71 @@
 <template>
   <div class="vertical-nav bg-white" id="sidebar">
-    <div class="py-4 px-3 mb-4 bg-light">
+    <div class="py-4 px-3 mb-1 bg-light">
       <div class="media d-flex align-items-center justify-content-center">
         <img
-          src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png"
+          src="@/assets/benny beaver.jpg"
           alt="..."
           width="65"
           class="mr-3 rounded-circle img-thumbnail shadow-sm"
         />
       </div>
       <div class="media d-flex align-items-center justify-content-center">
-        <h4 class="m-1">Jane Doe</h4>
+        <h4 class="m-1">Benny Beaver</h4>
       </div>
       <div class="media d-flex align-items-center justify-content-center">
-        <button type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4">
+        <button type="button" class="btn btn-primary shadow-sm px-4 mb-4">
           <i class="fa fa-bars mr-2"></i>
           <small class="text-uppercase font-weight-bold">Edit Profile</small>
         </button>
       </div>
     </div>
 
-    <ul class="nav flex-column bg-white mb-0">
-      <li class="nav-item open">
+    <div class="dropdown-divider"></div>
+
+    <ul class="nav flex-column bg-white mb-0 py-4">
+      <li class="nav-item open d-inline-block">
         <a href class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-          <i class="material-icons">home </i> Home
+          <i class="material-icons">home</i> Home
         </a>
       </li>
       <li class="nav-item">
         <a href class="nav-link text-dark font-italic bg-light">
-          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-          <i class="material-icons">directions_bus </i> 
+          <img src="@/assets/Beaver-icon.png" alt="..." class="beaverlogo ml-3" />
           Beaver Bus
         </a>
       </li>
       <li class="nav-item">
         <a href="#" class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-          <i class="material-icons">directions_bus </i> 
+          <i class="material-icons">directions_bus</i>
           Corvallis Bus
         </a>
       </li>
       <li class="nav-item">
-        <a href="#geolocation-and-campus-map" class="nav-link text-dark font-italic bg-light">
+        <router-link class="nav-link text-dark font-italic bg-light" to="/map">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-          <i class="material-icons">map </i> 
+          <i class="material-icons">map</i>
           Campus map
-        </a>
+        </router-link>
       </li>
       <li class="nav-item">
         <router-link class="nav-link text-dark font-italic bg-light" to="/eventform">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-          <i class="material-icons">favorite </i> 
+          <i class="material-icons">favorite</i>
           Add Events
         </router-link>
       </li>
-      
     </ul>
-</div>
+
+    <div class="dropdown-divider pt-5"></div>
+
+    <div class="d-flex justify-content-around">
+      <button type="button" class="btn btn-primary">FAQs</button>
+      <button type="button" class="btn btn-primary">Logout</button>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -65,3 +73,11 @@ export default {
   name: "v-navbar"
 };
 </script>
+
+<style scoped>
+.beaverlogo {
+  height: 1.25rem;
+  width: 1.85rem;
+}
+
+</style>
