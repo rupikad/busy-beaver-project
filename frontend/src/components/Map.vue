@@ -9,8 +9,9 @@
                     <h2>Busy Beaver</h2>
                 </nav>
                 <div id="floating-panel">
-                    <b>Start: </b>
+                    <span class="labels">Start: </span>
                     <select id="start">
+                        <option value="" selected="selected">Select start location...</option>
                         <option value="3450 SW Campus Way, Corvallis, OR 97331">Forage Seed Research Center</option>
                         <option value="109 Crop Science Building, 3050 SW Campus Way, Corvallis, OR 97331">Crop and Soil Science</option>
                         <option value="310 SW Weatherford Pl, Corvallis, OR 97331">Buxton Hall</option>
@@ -45,8 +46,10 @@
                         <option value="1701 SW Western Blvd, Corvallis, OR 97331">ILLC</option>
                         <option value="SW Western Blvd & SW 26th St, Corvallis, OR">Western</option>
                     </select>
-                    <b>End: </b>
+                    <span class="labels">End: </span>
                     <select id="end">
+                       <option value="" selected="selected">Select end location...</option>
+
                         <option value="3450 SW Campus Way, Corvallis, OR 97331">Forage Seed Research Center</option>
                         <option value="109 Crop Science Building, 3050 SW Campus Way, Corvallis, OR 97331">Crop and Soil Science</option>
                         <option value="310 SW Weatherford Pl, Corvallis, OR 97331">Buxton Hall</option>
@@ -210,6 +213,7 @@
         line-height: 30px;
         /*padding-left: 10px;*/
         margin: 20px;
+        
     }
 
     .navbar{
@@ -227,6 +231,15 @@
         color: white;
         padding: 20px;
         margin-bottom: 10px;
+    }
+
+    select{
+        padding:8px;
+    }
+
+    .labels{
+        padding:10px 1px 10px 20px;
+        font-weight: 800;
     }
 </style>
 
