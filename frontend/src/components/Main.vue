@@ -51,6 +51,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt augue interdum velit euismod in pellentesque massa. Sed nisi lacus sed viverra tellus in.</p>
       </div>
     </div> -->
+     <bbfooter></bbfooter>
   </div>
 </template>
 
