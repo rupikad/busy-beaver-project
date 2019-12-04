@@ -18,10 +18,8 @@
     <!-- End home page content -->
 
     <!-- beaver bus content -->
-    <div id="map" class="map">
-    </div>
+    <div id="map" class="map"></div>
     <!-- end beaver bus content -->
-
 
     <!-- geolocation content -->
     <div id="geolocation-and-campus-map" class="contentblock hidden">
@@ -35,6 +33,8 @@
 <script>
 import VNavbar from './VNavbar.vue';
 import gmapsInit from './gmaps.js';
+
+import home_image from "./home.png";
 
 export default {
     name: 'google_map',
@@ -67,6 +67,64 @@ export default {
                     bounds.extend(pos);
                     map.panToBounds(bounds);
                     map.setCenter(bounds.getCenter());
+
+                    // Start
+
+                    var iconBase = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
+                    //var iconBase = 'frontend/src/components/'
+                    var icons = {
+                        home: {
+                            icon: home_image
+                        },
+                        location: {
+                            icon: iconBase + 'parking_lot_maps.png'
+                        }
+                    };
+
+                    //console.log(GETroutes_response.data[0].attributes.stops[0].latitude);
+                    var routeCoordinates = [
+                        {lat: 44.5667559268, lng: -123.2891956531},
+                        {lat: 44.5667501941, lng: -123.2851884328},
+                        {lat: 44.5645297213, lng: -123.2815022394},
+                        {lat: 44.5636029495, lng: -123.2797954233},
+                        {lat: 44.5614950843, lng: -123.2797014713},
+                        {lat: 44.5606732297, lng: -123.2817989588},
+                        {lat: 44.5605375419, lng: -123.284523245},
+                        {lat: 44.5645921985, lng: -123.2891202417}
+                    ];
+
+                    var routePath = new google.maps.Polyline({
+                        path: routeCoordinates,
+                        geodesic: true,
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 1.0,
+                        strokeWeight: 2,
+                        type: 'home'
+                    });
+
+                    var stops = [
+                        {
+                            position: new google.maps.LatLng(routeCoordinates[0]),
+                            type: 'home'
+                        }, {
+                            position: new google.maps.LatLng(44.5667501941, -123.2851884328),
+                            type: 'home'
+                        }
+                    ];
+
+                    for (var i = 0; i < stops.length; i++) {
+                        var route_marker = new google.maps.Marker({
+                            position: stops[i].position,
+                            icon: icons[stops[i].type].icon,
+                            //label: 'B',
+                            //title: 'My marker',
+                            map: map
+                        });
+                    }
+
+                    routePath.setMap(map);
+
+                    // End
 
                     // create a marker of current location
                     const marker = new google.maps.Marker({
