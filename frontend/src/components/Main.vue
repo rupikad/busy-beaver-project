@@ -15,7 +15,7 @@
          
           <h5 class="display-4">
             Introducing <span class="beaver">Busy Beaver</span>
-           
+
           </h5>
 
           <p
