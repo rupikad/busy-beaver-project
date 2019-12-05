@@ -13,7 +13,7 @@
   </div>
 </nav>
  <svg viewBox="0 4 500 50" preserveAspectRatio="none" >
-    <path d="M-79.34,-43.71 C114.78,130.95 207.72,-64.44 499.66,40.16 L500.00,0.00 L0.79,-2.27 Z" style="stroke: none;fill: #dc4405;"></path>
+    <path d="M-79.34,-43.71 C64.78,130.95 120.72,-64.44 499.66,35.16 L500.00,0.00 L0.79,-2.27 Z" style="stroke: none;fill: #dc4405;"></path>
   </svg>
 </div>
 

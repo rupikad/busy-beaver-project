@@ -3,8 +3,8 @@
     <navbar></navbar>
     <div class="row">
       <div class="col-sm-8">
-        <div class="_content sm col-sm-12" align="center">
-          <p></p>
+        <div class="_content sm col-sm-12" >
+        
           <p class="lead">"Missed your class because you were confused about the bus schedules"?</p>
 
           <p
@@ -12,7 +12,7 @@
           >"Lost because you are super new to the campus and not sure where your classes are at"?</p>
           <p class="lead">"Need an app that can help you be on time every time? "</p>
 
-          <h2 class="highlight"></h2>
+         
           <h5 class="display-4">
             Introducing <span class="beaver">Busy Beaver</span>
            
@@ -22,18 +22,24 @@
             class="details"
           >The Busy Beaver application aims to integrate student class schedules with the Beaver Bus schedule. We are offering a one stop destination for students to synch up their calendars with the Beaver Bus so that they will get to class on time, move around on campus, and get the most out of this transportation service.</p>
           <!-- <p>Busy Beaver helps you get to your location faster and way lot easier. It is convenience-on-the-go! With BusyBeaver, you can keep track of your class schedules, track bus timings, and search to explore locations quick.</p> -->
-          <p class="display-custom">
-            <span class="dot"></span> Highlights
-            <span class="dot"></span>
+         
+           <div class="highlights" >
+              <p class="display-custom">
+             Highlights
+            
           </p>
           <p
-            class="details"
-          >Our application is an innovative take on traditional transit system applications because it adds the personalized touch of adding a student's schedule and calendar. This way the user doesn't have to go back and forth on apps in order to make sure they reach their destination on time. This application also takes care of updated events and resolves any scheduling changes in real time, and alerts the user of updated times to fit their schedule.</p>
+            class="details">
+            <ul>
+              <li><span class="dot"></span>Find any route faster and easier.</li>
+           <li><span class="dot"></span>Personalized Notifications based on your calendar</li>
+           <li><span class="dot"></span>Realtime Bus Alerts and Tracking.</li></ul></p>
         </div>
         <!-- <div class="sm col-sm-12" align="left">
           <h1>How is it useful to me?</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt augue interdum velit euismod in pellentesque massa. Sed nisi lacus sed viverra tellus in. Ac turpis egestas integer eget aliquet nibh praesent.</p>
         </div>-->
+      </div>
       </div>
       <div class="col-sm-4">
         <!--div class="container-fluid bg-1 text-left"    src="@/assets/main_pic.png"-->
@@ -84,23 +90,33 @@ export default {
 
 
 <style scoped>
+body{
+  padding:20px;
+}
 img {
   float: left;
 }
 .row {
-  padding: 10px;
+  padding: 0 20px 0 20px;
+  
 }
 
 .details {
   font-size: 1.1rem;
+}
+.details ul{
+  margin:0;
 }
 
 .display-custom {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.2;
-  margin-top:10px;
+  padding-right: 10px;
+   border-right: 8px solid #eee;
 }
+
+
 .line {
   width: 5px;
   height: 40px;
@@ -109,8 +125,9 @@ img {
 
 }
 .dot{
-    height: 15px;
-  width: 15px;
+    height: 13px;
+  width: 13px;
+  margin-right: 10px;
   background-color: #dc4405;
   border-radius: 50%;
   display: inline-block;
@@ -121,4 +138,15 @@ img {
  font-weight: 400;
 
 }
+
+.highlights{
+  margin-top:30px;
+  display:flex;
+ 
+}
+ul{
+  list-style-type:none;
+  padding-inline-start: 5px;
+}
+
 </style>
