@@ -1,27 +1,36 @@
 <!--html here -->
 <template>
-<div>
- <v-navbar></v-navbar>
-    <div class="d-flex justify-content-center">
+
+<div style="display:flex">
+    <v-navbar></v-navbar>
+    <div class="page-content" id="content">
+      <nav class="navbar navbar-dark custom-nav" style="margin-bottom:0">
+        <!-- Navbar content -->
+        <h2>Busy Beaver</h2>
+      </nav>
+
+      <div class="box">
+        <div class="row justify-content-center" >
+          <h3>Add a Event</h3>
+        </div>
+        <div class="justify-content-center">
         <form @submit="validateEvent()">
-            <div class="form-group row">
-                <h4> Add a Event </h4>
-            </div>
+           
             <!-- event title -->
-            <div class="form-group row">
-                <div class="col-sm-12">
+            <div class="col-sm-12">
+              <div class="form-group row">
                     <input class="form-control" type="text" id="EventName" placeholder="Event Title" v-model="form.title" v-on:change="validateEvent(form)"><br>
                 </div>
             </div>
 
             <!-- event location -->
-            <div class="form-group row">
-                <div class="col-sm-12">
+           <div class="col-sm-12">
+              <div class="form-group row">
                     <input class="form-control " type="text" id="EventLocation" placeholder="Location" v-model="form.location"><br>
                 </div>
             </div>
 
-
+   <div class="col-sm-12">
             <!-- event date picker only appears if all day is true-->
             <div class="form-group row" v-if="form.allDay">
                 <div>
@@ -34,6 +43,7 @@
             </div>
 
             <!-- event date time - if all day is false -->
+          
             <div class="form-group row" v-else>
                 <div>
                     
@@ -52,13 +62,13 @@
                     id="ToDate"></date-pick>
                 </div>
             </div>
-
+   </div> <div class="col-sm-12">
             <!-- all day toggle button -->
             <div class="custom-contol custom-switch form-group row">
                 <input type="checkbox" class="custom-control-input" id="dayswitch" v-model="form.allDay">
                 <label class="custom-control-label" for="dayswitch"> All day </label>
             </div>
-
+</div>
             <!-- notes textarea -->
             <div class="form-group row">
                 <div class="col">
@@ -83,6 +93,8 @@
             The event has been saved.
         </div>
     </div>
+      </div>
+</div>
 </div>
 </template>
 
@@ -159,4 +171,19 @@ export default {
 </script>
 
 <style scoped>
+.box {
+  -webkit-box-shadow: -6px 10px 37px -3px rgba(194, 194, 194, 1);
+  -moz-box-shadow: -6px 10px 37px -3px rgba(194, 194, 194, 1);
+  box-shadow: -6px 10px 37px -3px rgba(194, 194, 194, 1);
+
+  margin: 30px;
+  padding: 20px;
+}
+.row {
+  margin: 10px;
+}
+
+ input{
+    padding: 5px;
+}
 </style>
