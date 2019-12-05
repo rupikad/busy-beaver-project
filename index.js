@@ -1,22 +1,22 @@
+// === Express API ===/
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-const port = 3000;
-
 const app = express();
+const port = 3000;
+const router = require('./backend/routes/index')
 
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(bodyParser.json());
+app.use(router);
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Behold The MEVN Stack!'
-    });
-});
+// === Mongo DB ===/
+
+const db = require('./mongoose/dbHelper');
 
 app.listen(port, () => {
     console.log(`listening on ${port}`);

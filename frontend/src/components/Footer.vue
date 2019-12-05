@@ -6,6 +6,24 @@
 
 <script>
 export default{
-    name: 'footer',
+    name: 'bbfooter',
 }
 </script>
+
+
+<style scoped>
+
+footer p{
+  color:white;
+  
+}
+footer{
+  position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
+.container-fluid{
+  padding:10px 0px;
+}
+</style>

@@ -1,63 +1,249 @@
 <template>
-<div>
     <div>
-        <v-navbar></v-navbar>
-        <!-- Page content holder -->
-        <div class="page-content p-5" id="content">
-            <!-- Toggle button -->
-            <!--<button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4">
-                <i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small>
-            </button>-->
+        <div style="display:flex">
+            <v-navbar></v-navbar>
+            <!--Page content holder-->
+            <div class="page-content" id="content">
+                <nav class="navbar navbar-dark custom-nav" style="margin-bottom:0">
+                    <!-- Navbar content -->
+                    <h2>Busy Beaver</h2>
+                </nav>
+                <div id="floating-panel">
+                    <span class="labels">Start: </span>
+                    <select id="start">
+                        <option value="" selected="selected">Select start location...</option>
+                        <option value="3450 SW Campus Way, Corvallis, OR 97331">Forage Seed Research Center</option>
+                        <option value="109 Crop Science Building, 3050 SW Campus Way, Corvallis, OR 97331">Crop and Soil Science</option>
+                        <option value="310 SW Weatherford Pl, Corvallis, OR 97331">Buxton Hall</option>
+                        <option value="Weatherford Hall, 300 SW 26th St, Corvallis, OR 97331">Weatherford Hall</option>
+                        <option value="660 SW 26th St, Corvallis, OR 97331">Gill Coliseum</option>
+                        <option value="Southwest Ralph Miller Lane, Corvallis, OR">Ralph Miller Lane</option>
+                        <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Traux Northwest</option>
+                        <option value="Radiation Center, Southwest Jefferson Way, Corvallis, OR">Radiation Center</option>
+                        <option value="450 SW 30th St, Corvallis, OR 97331">Dryden Hall</option>
+                        <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax West</option>
+                        <option value="660 SW 26th St, Corvallis, OR 97331">Reser Stadium </option>
+                        <option value="875 SW 26th St, Corvallis, OR 97331">LaSells Stewart Center</option>
+                        <option value="663 SW 26th St, Corvallis, OR 97331">Beaver Store</option>
+                        <option value="DxRC, 425 SW 26th St, Corvallis, OR 97331">Dixion Recreation</option>
+                        <option value="Austin Hall, Southwest Jefferson Way, Corvallis, OR">Austin Hall</option>
+                        <option value="2901 SW Jefferson Way, Corvallis, OR 97331">Sackett Hall</option>
+                        <option value="Oak Creek Building, Southwest Western Boulevard, Corvallis, OR">Oak Creek Building</option>
+                        <option value="391 SW 30th St, Corvallis, OR 97331">West Hall</option>
+                        <option value="2500 SW Western Blvd, Corvallis, OR 97333">Hilton Garden Inn</option>
+                        <option value="1600 SW Western Blvd, Corvallis, OR 97333">University Plaza</option>
+                        <option value="SW 15th St & SW Western Blvd, Corvallis, OR">16th and A Ave</option>
+                        <option value="1420 SW Jefferson Way, Corvallis, OR 97331">Callahan Hall</option>
+                        <option value="201 SW Waldo Pl, Corvallis, OR 97331">Valley Library</option>
+                        <option value="2251 SW Jefferson Way, Corvallis, OR 97331">Student Experience Center</option>
+                        <option value="SW 15th St & SW Western Blvd, Corvallis, OR">15th and A Ave</option>
+                        <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax Indoor Practice Facility</option>
+                        <option value="Milam Hall, Southwest Campus Way, Corvallis, OR">Milam Hall</option>
+                        <option value="Gilkey Hall, Southwest Waldo Place, Corvallis, OR">Gilkey Hall</option>
+                        <option value="Kearney Hall, Southwest Campus Way, Corvallis, OR">Kearney Hall</option>
+                        <option value="Kerr Administration Building, Southwest Jefferson Way, Corvallis, OR">Kerr Admin</option>
+                        <option value="Adams Hall, Southwest 15th Street, Corvallis, OR">Adams Hall</option>
+                        <option value="1701 SW Western Blvd, Corvallis, OR 97331">ILLC</option>
+                        <option value="SW Western Blvd & SW 26th St, Corvallis, OR">Western</option>
+                    </select>
+                    <span class="labels">End: </span>
+                    <select id="end">
+                       <option value="" selected="selected">Select end location...</option>
 
-            <!-- title -->
-            <h2 class="display-4 text-white">Beaver Bus</h2>
+                        <option value="3450 SW Campus Way, Corvallis, OR 97331">Forage Seed Research Center</option>
+                        <option value="109 Crop Science Building, 3050 SW Campus Way, Corvallis, OR 97331">Crop and Soil Science</option>
+                        <option value="310 SW Weatherford Pl, Corvallis, OR 97331">Buxton Hall</option>
+                        <option value="Weatherford Hall, 300 SW 26th St, Corvallis, OR 97331">Weatherford Hall</option>
+                        <option value="660 SW 26th St, Corvallis, OR 97331">Gill Coliseum</option>
+                        <option value="Southwest Ralph Miller Lane, Corvallis, OR">Ralph Miller Lane</option>
+                        <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Traux Northwest</option>
+                        <option value="Radiation Center, Southwest Jefferson Way, Corvallis, OR">Radiation Center</option>
+                        <option value="450 SW 30th St, Corvallis, OR 97331">Dryden Hall</option>
+                        <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax West</option>
+                        <option value="660 SW 26th St, Corvallis, OR 97331">Reser Stadium </option>
+                        <option value="875 SW 26th St, Corvallis, OR 97331">LaSells Stewart Center</option>
+                        <option value="663 SW 26th St, Corvallis, OR 97331">Beaver Store</option>
+                        <option value="DxRC, 425 SW 26th St, Corvallis, OR 97331">Dixion Recreation</option>
+                        <option value="Austin Hall, Southwest Jefferson Way, Corvallis, OR">Austin Hall</option>
+                        <option value="2901 SW Jefferson Way, Corvallis, OR 97331">Sackett Hall</option>
+                        <option value="Oak Creek Building, Southwest Western Boulevard, Corvallis, OR">Oak Creek Building</option>
+                        <option value="391 SW 30th St, Corvallis, OR 97331">West Hall</option>
+                        <option value="2500 SW Western Blvd, Corvallis, OR 97333">Hilton Garden Inn</option>
+                        <option value="1600 SW Western Blvd, Corvallis, OR 97333">University Plaza</option>
+                        <option value="SW 15th St & SW Western Blvd, Corvallis, OR">16th and A Ave</option>
+                        <option value="1420 SW Jefferson Way, Corvallis, OR 97331">Callahan Hall</option>
+                        <option value="201 SW Waldo Pl, Corvallis, OR 97331">Valley Library</option>
+                        <option value="2251 SW Jefferson Way, Corvallis, OR 97331">Student Experience Center</option>
+                        <option value="SW 15th St & SW Western Blvd, Corvallis, OR">15th and A Ave</option>
+                        <option value="Merrit Truax Indoor Practice Facility, 661 SW 30th St, Corvallis, OR 97331">Truax Indoor Practice Facility</option>
+                        <option value="Milam Hall, Southwest Campus Way, Corvallis, OR">Milam Hall</option>
+                        <option value="Gilkey Hall, Southwest Waldo Place, Corvallis, OR">Gilkey Hall</option>
+                        <option value="Kearney Hall, Southwest Campus Way, Corvallis, OR">Kearney Hall</option>
+                        <option value="Kerr Administration Building, Southwest Jefferson Way, Corvallis, OR">Kerr Admin</option>
+                        <option value="Adams Hall, Southwest 15th Street, Corvallis, OR">Adams Hall</option>
+                        <option value="1701 SW Western Blvd, Corvallis, OR 97331">ILLC</option>
+                        <option value="SW Western Blvd & SW 26th St, Corvallis, OR">Western</option>
+                    </select>
+                </div>
+                <div id="map" class="map"></div>
+                <!-- end beaver bus content -->
+
+                <!-- geolocation content -->
+                <div id="geolocation-and-campus-map" class="contentblock hidden">
+                </div>
+            </div>
         </div>
-        <div class="separator"></div>
+        <!-- beaver bus content -->
+
     </div>
-
-    <!-- End home page content -->
-
-    <!-- beaver bus content -->
-    <div id="beaver-bus" class="contentblock hidden">
-        <p style="text-align: center;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2842.52932598051!2d-123.28396408510947!3d44.5657372009622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c040bbc7dcf783%3A0xa31f68aa9f3c376a!2sLearning%20Innovation%20Center%2C%20165%20SW%20Sackett%20Pl%2C%20Corvallis%2C%20OR%2097331!5e0!3m2!1sen!2sus!4v1572207497625!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </p>
-    </div>
-
-
-    <!-- end beaver bus content -->
-
-    <!-- geolocation content -->
-
-    <div id="geolocation-and-campus-map" class="contentblock hidden">
-        <p>geolocation</p>
-    </div>
-
-    <!-- end geolocation content -->
-
-    <!-- jquery stuff end-->
-</div>
 </template>
 
 <script>
-import VNavbar from './VNavbar.vue'
+    import VNavbar from './VNavbar.vue';
+    import gmapsInit from './gmaps.js';
 
-export default {
-    name: 'map',
-    components: {
-        VNavbar
+    export default {
+        name: 'google_map',
+        components: {
+            VNavbar
+        },
+        async mounted() {
+            try {
+                // get the maps from api
+                const google = await gmapsInit();
+
+                let directionsService = new google.maps.DirectionsService();
+                let directionsRenderer = new google.maps.DirectionsRenderer();
+
+                // create a new map with styling
+                const map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 44.564535, lng: -123.277284}, // osu
+                    zoom: 16,
+                    mapTypeControl: true,
+                    mapTypeId: 'roadmap',
+                });
+
+                directionsRenderer.setMap(map);
+
+                let onChangeHandler = function() {
+                    calculateAndDisplayRoute(directionsService, directionsRenderer);
+                };
+                document.getElementById('start').addEventListener('change', onChangeHandler);
+                document.getElementById('end').addEventListener('change', onChangeHandler);
+
+                // display the current position of user
+                const displayPos =
+                    function(position) {
+                        let pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+
+                        // center the map and cater to position
+                        let bounds = new google.maps.LatLngBounds();
+                        bounds.extend(pos);
+                        map.panToBounds(bounds);
+                        map.setCenter(bounds.getCenter());
+
+                        // create a marker of current location
+                        const marker = new google.maps.Marker({
+                            position: pos,
+                            // label: '!',
+                            title: 'You are here!',
+                            map: map,
+                        });
+                    };
+
+                // display error if location not available
+                const displayError =
+                    function() {
+                        handleLocationError(true, infoWindow, map.getCenter(), map);
+                    };
+
+                // create new info window
+                const infoWindow = new google.maps.InfoWindow;
+
+                if (navigator.geolocation) {
+                    // actually getting the current location
+                    navigator.geolocation.getCurrentPosition(displayPos, displayError, {
+                        enableHighAccuracy: true,
+                    });
+                } else {
+                    // Browser doesn't support Geolocation
+                    handleLocationError(false, infoWindow, map.getCenter(), map);
+                }
+            } catch (error) {
+                console.error(error); // eslint-disable-line no-console
+            }
+        },
     }
-}
 
-// jquery stuff that i dont understand -->
-// <!--got it from here-> http://designm.ag/tutorials/building-vertical-tabbed-content-with-jquery/ -->
-/*function() {
-  // Sidebar toggle behavior
-  $('#sidebarCollapse').on('click', function() {
-    $('#sidebar, #content').toggleClass('active');
-  });
-}*/
+    // handles location error
+    function handleLocationError(browserHasGeolocation, infoWindow, pos, map) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'ERROR: Geolocation service failed.' :
+            'ERROR: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+    }
+
+    function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+        directionsService.route(
+            {
+                origin: {query: document.getElementById('start').value},
+                destination: {query: document.getElementById('end').value},
+                travelMode: 'WALKING',
+            },
+            function(response, status) {
+                if (status === 'OK') {
+                    directionsRenderer.setDirections(response);
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            });
+    }
 </script>
+<style>
+    #floating-panel {
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        /*padding-left: 10px;*/
+        margin: 20px;
+        
+    }
+
+    .navbar{
+        background-color: #dc4405;
+    }
+
+    #map {
+        height: 400px;
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .custom-nav {
+        height: auto;
+        color: white;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    select{
+        padding:8px;
+    }
+
+    .labels{
+        padding:10px 1px 10px 20px;
+        font-weight: 800;
+    }
+</style>
+
+
 
 
 

@@ -11,7 +11,7 @@
     min-width: 17rem;
     width: 17rem;
     height: 100vh;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
 
 .page-content {
     width: calc(100% - 17rem);
-    margin-left: 17rem;
+    /* margin-left: 17rem; */
     transition: all 0.4s;
 }
 
@@ -64,8 +64,6 @@
 
 body {
     background: #000000;
-    background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
-    background: linear-gradient(to right, #ffa500, #c2e59c);
     min-height: 100vh;
     overflow-x: hidden;
     font: 20px Montserrat, sans-serif;
@@ -76,9 +74,9 @@ body {
     border-bottom: 1px dashed #fff;
 }
 
-.text-uppercase {
+/* .text-uppercase {
     letter-spacing: 0.1em;
-}
+} */
 
 .text-gray {
     color: #aaa;
@@ -86,8 +84,22 @@ body {
 
 p {
     font-size: 16px;
-    color: red;
+    color: black;
 }
+
+p.thicker {
+    font-weight: 900;
+    font-size: large
+}
+
+/* .middle {
+    position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  } */
+  
 
 .mystyle {
     color: green;
@@ -117,7 +129,7 @@ p {
 }
 
 .bg-4 {
-    background-color: #fa9e05;
+    background-color: #dc4405;
     /* Orange */
     color: #ffffff;
 }
@@ -128,17 +140,32 @@ p {
 }
 
 .navbar {
+    display: flex;
     list-style-type: none;
     border: 0;
-    background-color: #fa9e05;
+    background-color: #dc4405;
     border-radius: 0;
-    margin-bottom: 0;
-    font-size: 14px;
-    letter-spacing: 5px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    /* letter-spacing: 5px;
+    height: 180px; */
 }
 
-.navbar-nav li a:hover {
-    color: #000000 !important;
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    margin: 0 5px 0 5px;
 }
 
 .navbar-brand small {
@@ -149,4 +176,9 @@ p {
 .nav.navbar-nav a {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.nav-logo{
+    flex-grow: 1;
+    text-align: center;
 }
