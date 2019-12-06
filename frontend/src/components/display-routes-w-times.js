@@ -93,6 +93,23 @@ function myDataCallback(data){
         for (i = 0; i < data.data.length; i++){
             etaTable.push([data.data[i].attributes.stopID, data.data[i].attributes.arrivals[0].eta]) 
         }
+
+        var options = {
+            timeZone: "America/Los_Angeles",
+            year: 'numeric', month: 'numeric', day: 'numeric',
+            hour: 'numeric', minute: 'numeric', second: 'numeric'
+        };
+
+        var formatter = new Intl.DateTimeFormat([], options);
+
+        for(i=0; i < etaTable.length; i++){
+            etaTable[1,i][1] = formatter.format(new Date(etaTable[1,i][1])).slice(11,21);
+        }    
+        var len = routeTable.length - etaTable.length;
+
+        for (j = 0; j < len; j++){
+            etaTable.unshift([ 0 , "No arrival times listed" ]);
+        }
         // for (i = 0; i < etaTable.length; i ++){
         //     etaObject[i] = {
         //         "stopID" : etaTable[i][0],
@@ -128,7 +145,7 @@ function myDataCallback(data){
     for (j = 0; j < routeTable.length; j++) {
         txt += "<td>" + routeTable[1,j][1] + "</td>" //routeObject[j].description + "</td>";
         txt += "<td>" + routeTable[j][0] + "</td>" //routeObject[j].attribues.stopID + "</td>";
-        txt += "<td>" + "Next bus arrives at 7:00 AM" + "</td>"// etaTable[1,j-1][1] + "</td>"
+        txt += "<td>" + etaTable[1,j][1] + "</td>" //"Next bus arrives at 7:00 AM" + "</td>"// etaTable[1,j-1][1] + "</td>"
         txt += "</tr>" 
     }   
     txt += "</table>"  
