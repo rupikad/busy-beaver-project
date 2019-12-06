@@ -1,8 +1,8 @@
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var routeTable = [];
-var routeObject = [];
+// var routeObject = []; 
 var etaTable = [];
-var etaObject = [];
+// var etaObject = [];
 var routeDescriptionTable = [];
 // var displayObject;
 // var txt = "";
@@ -57,11 +57,7 @@ var getRouteData = function(path, token, callback){
         }
 }
 
-// Callback function to be used by both endpoints
-// This way, data from both can be integrated into a single object
-// that can be used to display data in the vue component
-
-// Callback function to generate token used in API calls 
+// Callback function to generate auth token for API calls //
 function myTokenCallback(response){
     var token; 
     if (response != 'undefined'){ 
@@ -71,73 +67,74 @@ function myTokenCallback(response){
     getRouteData("https://cors-anywhere.herokuapp.com/https://api.oregonstate.edu/v1/beaverbus/routes", token, myDataCallback); //myRoutesCallback);
 }
 
+// Generating data to be used by vue component // 
 function myDataCallback(data){
-
+    // Generating table with stopID + descriptions // 
     if (data.data.length == 6){
 
-        for (var i = 0; i < 6; i ++){
+        for (var i = 0; i < 6; i ++){  
             routeDescriptionTable.push(data.data[i].attributes.description.trim())
             for (var j = 0; j < data.data[i].attributes.stops.length ; j ++){
                 routeTable.push([data.data[i].attributes.stops[j].stopID, data.data[i].attributes.stops[j].description])
             }
         }
         routeTable.sort();
-        for (i = 0; i < routeTable.length; i ++){
-            routeObject[i] = {
-                "stopID" : routeTable[i][0],
-                "description" : routeTable[1,i][1],
-                "eta" : ""
-            }
-        }
+        // for (i = 0; i < routeTable.length; i ++){
+        //     routeObject[i] = {
+        //         "stopID" : routeTable[i][0],
+        //         "description" : routeTable[1,i][1],
+        //         "eta" : ""
+        //     }
+        // }
     }
-
-    if (data.data.length > 10){
+    // Generating table w stopID + arrival times // 
+    if (data.data.length > 10){ 
         // console.log(data.data[32].attributes.arrivals[0].eta)
         for (i = 0; i < data.data.length; i++){
             etaTable.push([data.data[i].attributes.stopID, data.data[i].attributes.arrivals[0].eta]) 
         }
-        for (i = 0; i < etaTable.length; i ++){
-            etaObject[i] = {
-                "stopID" : etaTable[i][0],
-                "eta" : etaTable[1,i][1]
-            }
-        }
+        // for (i = 0; i < etaTable.length; i ++){
+        //     etaObject[i] = {
+        //         "stopID" : etaTable[i][0],
+        //         "eta" : etaTable[1,i][1]
+        //     }
+        // }
+
         // if (typeof data.data.attributes.arrivals[0].eta == undefined){
         //     routeObject.eta = "No ETA available"
         // }
-
-        for (i = 0; i < etaTable.length; i++){
-            for (j =0; j < routeTable.length; j++){
-            if (etaTable[i][0] == routeObject[j].stopID){
-                routeObject[j].eta = etaTable[1,i][1];
-            } else {
-                routeObject[j].eta = "No ETA available"
-                }
-            }
-        }
+        // for (i = 0; i < etaTable.length; i++){
+        //     for (j =0; j < routeTable.length; j++){
+        //     if (etaTable[i][0] == routeTable[j].stopID){
+        //         routeObject[j].eta = etaTable[1,i][1];
+        //     } else {
+        //         routeObject[j].eta = "No ETA available"
+        //         }
+        //     }
+        // }
     }
-    var txt = "";
-    txt += "<table id='table' class= 'table table-sm' align='center' border='1px'>";        
 
-    // for (i = 0; i < routeDescriptionTable.length; i++) {
+    // Begin html code to populate table // 
+    var txt = "";
+    // Table creation 
+    txt += "<table id='table' class= 'table table-sm' align='center' border='1px'>";        
+    // Creating headers 
     txt += "<tr>"
-    txt += "<th>" +  'List of routes' + "</th>" //routeDescriptionTable[i]  + "</th>"//data.data[i].attributes.description.trim() + "</th>"
+    txt += "<th>" +  'List of routes' + "</th>" //routeDescriptionTable[i]  + "</th>"
     txt += "<th>" + 'Stop ID' + "</th>"
     txt += "<th>" + 'ETA' + "</th>"
     txt += "</tr>"
-
+    // Populating w data 
     for (j = 0; j < routeTable.length; j++) {
         txt += "<td>" + routeTable[1,j][1] + "</td>" //routeObject[j].description + "</td>";
         txt += "<td>" + routeTable[j][0] + "</td>" //routeObject[j].attribues.stopID + "</td>";
-        // txt += "<td>" + etaTable[1,j-1][1] + "</td>"//"Next bus arrives at 7:00 AM" + "</td>"
+        txt += "<td>" + "Next bus arrives at 7:00 AM" + "</td>"// etaTable[1,j-1][1] + "</td>"
         txt += "</tr>" 
     }   
-      
     txt += "</table>"  
-    document.getElementById('GETroutes_response').innerHTML = txt;
-        // console.log(routeObject);
-    
+    document.getElementById('GETroutes_response').innerHTML = txt; // sending tag to vue component    
 }
+//OLD CODE!//
 
 // function myDataCallback(data){
 //     var routes = [];
