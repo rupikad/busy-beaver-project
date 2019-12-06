@@ -10,7 +10,7 @@
     </nav>
     <!-- Displaying stops and times -->
     <div class= "container">
-      <p id="GETroutes_response">Nothing yeet</p>
+      <p id="GETroutes_response">Nothing yet</p>
       <!-- <p>Next available Beaver Bus:</p> -->
     <div class= "row">
       <div v-for= "item in objectItems" :key="item">
