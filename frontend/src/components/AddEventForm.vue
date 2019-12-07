@@ -1,11 +1,11 @@
 <!--html here -->
 <template>
+
     <div>
       <div class="bb-shadow-box form-container">
-        <div class="row justify-content-center" >
-          <h3>Add a Event</h3>
-        </div>
+ 
         <div class="justify-content-center">
+            <h4>Add a Event</h4>
         <form @submit="validateEvent()">
            
             <!-- event title -->
@@ -63,11 +63,11 @@
 </div>
             <!-- notes textarea -->
             <div class="form-group row">
-                <div class="col">
-                    <!--<input class="form-control " type="text" id="RepeatEvent" placeholder="Repeat Event" v-model="repeat"><br>-->
+                <div class="spacing col-sm-4">
+                    <input class="form-control " type="text" id="RepeatEvent" placeholder="Repeat Event" v-model="repeat"><br>
                     <input type="checkbox" class="custom-control-input" id="repeat" v-model="form.repeat"><br>
                 </div>
-                <div class="col"> 
+                <div class="col-sm-6" > 
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Notes" v-model="form.notes"></textarea>
                 </div>
             </div>
@@ -174,5 +174,8 @@ export default {
 
  input{
     padding: 5px;
+}
+.spacing{
+    margin:10px;
 }
 </style>

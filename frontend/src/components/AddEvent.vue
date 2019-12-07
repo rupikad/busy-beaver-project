@@ -2,13 +2,18 @@
 <template>
 
 <div>
-    <nav class="navbar navbar-dark custom-nav" style="margin-bottom:0">
+  
+    <div style="display:flex">
+        
+        <v-navbar></v-navbar>
+        <div class="page-content" id="content">
+          <nav class="navbar navbar-dark custom-nav" style="margin-bottom:0">
     <!-- Navbar content -->
     <h2>Busy Beaver</h2>
     </nav>
-    <div style="display:flex">
-        <v-navbar></v-navbar>
+
         <addEventForm class="page-content bb-add-event-form" id="content"></addEventForm>
+    </div>
     </div>
 </div>
 </template>
@@ -32,5 +37,8 @@ export default {
 <style scoped>
 .bb-add-event-form{
     margin: 30px;
+}
+.event_add{
+    background-color: #dc4405 !important;
 }
 </style>
