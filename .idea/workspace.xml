@@ -4,6 +4,7 @@
     <list default="true" id="9fd90bf3-8edd-4b40-b836-4f4cb90d93ea" name="Default Changelist" comment="put google maps in maps page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Map.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,13 +55,13 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\vanil\busy-beaver-project\frontend\src\assets" />
-      <recent name="C:\Users\Rupika\Documents\OSU\Classes\CS-561-SE-METHODS\busy-beaver-project\frontend\src\components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vanil\busy-beaver-project\frontend\src\components" />
       <recent name="C:\Users\Rupika\Documents\OSU\Classes\CS-561-SE-METHODS\busy-beaver-project\frontend\src\utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vanil\busy-beaver-project\frontend\src\assets" />
+      <recent name="C:\Users\Rupika\Documents\OSU\Classes\CS-561-SE-METHODS\busy-beaver-project\frontend\src\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -75,15 +76,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Map.vue">
+  <component name="RunManager" selected="Node.js.parse_JSON.js">
     <configuration name="Map.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/busy-beaver-project/frontend/src/components/Map.vue" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="json2tbl.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/busy-beaver-project/frontend/src/components/display_json_data/json_data_to_table/json2tbl.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="parse_JSON.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend/src/components/parse_JSON.js" working-dir="$PROJECT_DIR$/frontend/src/components">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.parse_JSON.js" />
         <item itemvalue="JavaScript Debug.Map.vue" />
         <item itemvalue="JavaScript Debug.json2tbl.html" />
       </list>
@@ -126,15 +131,6 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
