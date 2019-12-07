@@ -30,7 +30,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link text-dark font-italic bg-light" to="/newfeature">
+        <router-link class="nav-link text-dark font-italic bg-light" to="/eta">
           <img src="@/assets/Beaver-icon.png" alt="..." class="beaverlogo ml-3" />
           Beaver Bus
         </router-link>
