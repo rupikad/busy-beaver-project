@@ -24,10 +24,10 @@
 
     <ul class="nav flex-column bg-white mb-0 py-4">
       <li class="nav-item open d-inline-block">
-        <a href class="nav-link text-dark font-italic bg-light">
+        <router-link to="/dashboard" class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
           <i class="material-icons">home</i> Home
-        </a>
+        </router-link>
       </li>
       <li class="nav-item">
         <router-link class="nav-link text-dark font-italic bg-light" to="/newfeature">

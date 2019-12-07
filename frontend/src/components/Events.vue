@@ -15,7 +15,7 @@ export default {
     name: 'events',
     data: function(){
         return{
-            ev: this.getev(this),
+            ev: this.getev(),
             test: false
         }
     },

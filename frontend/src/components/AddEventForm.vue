@@ -1,15 +1,7 @@
 <!--html here -->
 <template>
-
-<div style="display:flex">
-    <v-navbar></v-navbar>
-    <div class="page-content" id="content">
-      <nav class="navbar navbar-dark custom-nav" style="margin-bottom:0">
-        <!-- Navbar content -->
-        <h2>Busy Beaver</h2>
-      </nav>
-
-      <div class="box">
+    <div>
+      <div class="bb-shadow-box form-container">
         <div class="row justify-content-center" >
           <h3>Add a Event</h3>
         </div>
@@ -95,7 +87,6 @@
     </div>
       </div>
 </div>
-</div>
 </template>
 
 <script>
@@ -133,11 +124,17 @@ export default {
             } else {
                 this.valid = true
             }
+
+            return this.valid
         },
 
         postEvent(context){
             var vm = this
             var form = this.form
+
+            if (!vm.validateEvent(form)){
+                return new Error ("Input is not valid");
+            }
 
             var event = {
                 "allDay": form.allDay,
@@ -171,14 +168,6 @@ export default {
 </script>
 
 <style scoped>
-.box {
-  -webkit-box-shadow: -6px 10px 37px -3px rgba(194, 194, 194, 1);
-  -moz-box-shadow: -6px 10px 37px -3px rgba(194, 194, 194, 1);
-  box-shadow: -6px 10px 37px -3px rgba(194, 194, 194, 1);
-
-  margin: 30px;
-  padding: 20px;
-}
 .row {
   margin: 10px;
 }

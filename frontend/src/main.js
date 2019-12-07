@@ -11,7 +11,7 @@ Vue.use(VueRouter)
 
 import BBMain from './components/Main.vue'
 import BBMap from './components/Map.vue'
-import BBEventForm from './components/AddEventForm.vue'
+import BBEventForm from './components/AddEvent.vue'
 import BBNewFeature from './components/new_feature.vue'
 import BBPageNotFound from './components/page_not_found.vue'
 import BBEvents from './components/Events.vue'
