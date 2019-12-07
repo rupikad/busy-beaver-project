@@ -79,25 +79,24 @@ function myDataCallback(data){
             }
         }
         routeTable.sort();
-        // for (i = 0; i < routeTable.length; i ++){
-        //     routeObject[i] = {
-        //         "stopID" : routeTable[i][0],
-        //         "description" : routeTable[1,i][1],
-        //         "eta" : ""
-        //     }
-        // }
+
+        for (i = 0 ; i < routeTable.length; i++){
+            etaTable.push([0, "No arrival times listed"]) 
+        }
     }
     // Generating table w stopID + arrival times // 
-    if (data.data.length != 6){ 
+    if (data.data.length !== 6){ 
         // console.log(data.data[32].attributes.arrivals[0].eta)
 
-        if (data.data.length == undefined){
+        if (data.data.length == 0){
             for (i = 0 ; i < routeTable.length; i++){
-                etaTable.push([ 0 , "No arrival times listed" ])
+                // etaTable.push([ 0 , "No arrival times listed" ])
             }
         } else {            
+            // etaTable = [];
             for (i = 0; i < data.data.length; i++){
-                etaTable.push([data.data[i].attributes.stopID, data.data[i].attributes.arrivals[0].eta]) 
+                // etaTable.push([data.data[i].attributes.stopID, data.data[i].attributes.arrivals[0].eta])
+                etaTable[i] = [data.data[i].attributes.stopID, data.data[i].attributes.arrivals[0].eta] //.push([data.data[i].attributes.stopID, data.data[i].attributes.arrivals[0].eta]) 
             }
 
             var options = {
@@ -116,47 +115,28 @@ function myDataCallback(data){
             for (j = 0; j < len; j++){
                 etaTable.unshift([ 0 , "No arrival times listed" ]);
             }
-            // for (i = 0; i < etaTable.length; i ++){
-            //     etaObject[i] = {
-            //         "stopID" : etaTable[i][0],
-            //         "eta" : etaTable[1,i][1]
-            //     }
-            // }
+        } 
+    }
+                // Begin html code to populate table // Moved from outside of second if statement for faster loading.
+                var txt = "";
+                // Table creation 
+                txt += "<table id='table' class= 'table table-sm' align='center' border='1px'>";        
+                // Creating headers 
+                txt += "<tr>"
+                txt += "<th>" +  'List of routes' + "</th>" //routeDescriptionTable[i]  + "</th>"
+                txt += "<th>" + 'Stop ID' + "</th>"
+                txt += "<th>" + 'ETA' + "</th>"
+                txt += "</tr>"
+                // Populating w data 
+                for (j = 0; j < routeTable.length; j++) {
+                    txt += "<td>" + routeTable[1,j][1] + "</td>" //routeObject[j].description + "</td>";
+                    txt += "<td>" + routeTable[j][0] + "</td>" //routeObject[j].attribues.stopID + "</td>";
+                    txt += "<td>" + etaTable[1,j][1] + "</td>" //"Next bus arrives at 7:00 AM" + "</td>"// etaTable[1,j-1][1] + "</td>"
+                    txt += "</tr>" 
+                }   
+                txt += "</table>"  
+                document.getElementById('GETroutes_response').innerHTML = txt; // sending tag to vue component   
 
-            // if (typeof data.data.attributes.arrivals[0].eta == undefined){
-            //     routeObject.eta = "No ETA available"
-            // }
-            // for (i = 0; i < etaTable.length; i++){
-            //     for (j =0; j < routeTable.length; j++){
-            //     if (etaTable[i][0] == routeTable[j].stopID){
-            //         routeObject[j].eta = etaTable[1,i][1];
-            //     } else {
-            //         routeObject[j].eta = "No ETA available"
-            //         }
-            //     }
-            // }
-        }
-
-        // Begin html code to populate table // 
-        var txt = "";
-        // Table creation 
-        txt += "<table id='table' class= 'table table-sm' align='center' border='1px'>";        
-        // Creating headers 
-        txt += "<tr>"
-        txt += "<th>" +  'List of routes' + "</th>" //routeDescriptionTable[i]  + "</th>"
-        txt += "<th>" + 'Stop ID' + "</th>"
-        txt += "<th>" + 'ETA' + "</th>"
-        txt += "</tr>"
-        // Populating w data 
-        for (j = 0; j < routeTable.length; j++) {
-            txt += "<td>" + routeTable[1,j][1] + "</td>" //routeObject[j].description + "</td>";
-            txt += "<td>" + routeTable[j][0] + "</td>" //routeObject[j].attribues.stopID + "</td>";
-            txt += "<td>" + etaTable[1,j][1] + "</td>" //"Next bus arrives at 7:00 AM" + "</td>"// etaTable[1,j-1][1] + "</td>"
-            txt += "</tr>" 
-        }   
-        txt += "</table>"  
-        document.getElementById('GETroutes_response').innerHTML = txt; // sending tag to vue component    
-        }
 }
 //OLD CODE!//
 
