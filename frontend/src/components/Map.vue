@@ -204,6 +204,7 @@
     }
 </script>
 <style>
+<<<<<<< HEAD
     #floating-panel {
         z-index: 5;
         background-color: #fff;
@@ -241,6 +242,23 @@
         padding:10px 1px 10px 20px;
         font-weight: 800;
     }
+=======
+.navbar{
+    background-color: #dc4405;
+}
+.map {
+  height: 400px;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.custom-nav {
+  height: auto;
+  color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+>>>>>>> backend-integration-bus-routes
 </style>
 
 
