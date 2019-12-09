@@ -67,7 +67,19 @@ function parse_stops(route_list){
 }
 
 const route_list = parse_routes();
-const stop_list = parse_stops(route_list);
-console.log(stop_list);
+// console.log(route_list[0]);
+// const stop_list = parse_stops(route_list);
+// console.log(stop_list);
+//console.log(route_list[0]['stops'][0]['description']);
+//.log(route_list[0]['stops'].length);
+console.log(route_list[5]);
 
-// export default stop_list;
+//export default route_list;
+exports.route_list = route_list;
+
+//0 Northwest Route blue
+//1 West Route 1 orange
+//2 West Route 2 brown
+//3 East Route purple
+//4 Central Route yellow
+//5 Northeast Route green

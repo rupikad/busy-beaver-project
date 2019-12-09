@@ -24,13 +24,13 @@
 
     <ul class="nav flex-column bg-white mb-0 py-4">
       <li class="nav-item open d-inline-block">
-        <a href class="nav-link text-dark font-italic bg-light">
+        <router-link to="/dashboard" class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-          <i class="material-icons">home</i> Home
-        </a>
+          <i class="material-icons">home</i> Dashboard
+        </router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link text-dark font-italic bg-light" to="/newfeature">
+        <router-link class="nav-link text-dark font-italic bg-light" to="/eta">
           <img src="@/assets/Beaver-icon.png" alt="..." class="beaverlogo ml-3" />
           Beaver Bus
         </router-link>
@@ -53,7 +53,7 @@
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link text-dark font-italic bg-light" to="/eventform">
+        <router-link class="nav-link text-dark font-italic bg-light event_add" to="/eventform">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
           <i class="material-icons">favorite</i>
           Add Events
@@ -101,5 +101,9 @@ border:none;
     background-color:white;
     color:#dc4405;
     border:1px solid #dc4405;
+    }
+     a.nav-link.text-dark.font-italic.bg-light.router-link-exact-active.router-link-active{
+      background-color: #dc4405 !important;
+      color:white !important;
     }
 </style>

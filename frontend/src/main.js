@@ -11,11 +11,12 @@ Vue.use(VueRouter)
 
 import BBMain from './components/Main.vue'
 import BBMap from './components/Map.vue'
-import BBEventForm from './components/AddEventForm.vue'
+import BBEventForm from './components/AddEvent.vue'
 import BBNewFeature from './components/new_feature.vue'
 import BBPageNotFound from './components/page_not_found.vue'
 import BBEvents from './components/Events.vue'
 import BBDashboard from './components/Dashboard.vue'
+import BBStopEta from './components/DisplayStopswTimes.vue'
 
 const routes = [
     { path: '/', component: BBMain, name: 'main' },
@@ -24,7 +25,8 @@ const routes = [
     { path: '/eventform', component: BBEventForm, name: 'eventform' },
     { path: '/newfeature', component: BBNewFeature, name: 'newfeature' },
     { path: '*', component: BBPageNotFound, name: 'pagenotfound' },
-    { path: '/events', component: BBEvents, name: 'events' }
+    { path: '/events', component: BBEvents, name: 'events' },
+    { path: '/eta', component: BBStopEta, name: 'eta'}
 ]
 
 const router = new VueRouter({
