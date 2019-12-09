@@ -26,7 +26,7 @@
       <li class="nav-item open d-inline-block">
         <router-link to="/dashboard" class="nav-link text-dark font-italic bg-light">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-          <i class="material-icons">home</i> Home
+          <i class="material-icons">home</i> Dashboard
         </router-link>
       </li>
       <li class="nav-item">
@@ -53,7 +53,7 @@
         </router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link text-dark font-italic bg-light" to="/eventform">
+        <router-link class="nav-link text-dark font-italic bg-light event_add" to="/eventform">
           <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
           <i class="material-icons">favorite</i>
           Add Events
@@ -101,5 +101,9 @@ border:none;
     background-color:white;
     color:#dc4405;
     border:1px solid #dc4405;
+    }
+     a.nav-link.text-dark.font-italic.bg-light.router-link-exact-active.router-link-active{
+      background-color: #dc4405 !important;
+      color:white !important;
     }
 </style>

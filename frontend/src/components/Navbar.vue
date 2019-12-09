@@ -7,9 +7,9 @@
     <!-- <router-link to="/map">Go to Map</router-link> -->
     <!--router-link to="/">CONTACT</router-link-->
 
-    <router-link to="/map">Login</router-link>
+    <router-link to="/dashboard">Login</router-link>
 
-     <router-link to="/map">Contact</router-link>
+     <router-link to="/dashboard">Contact</router-link>
   </div>
 </nav>
  <svg viewBox="0 4 500 50" preserveAspectRatio="none" >
