@@ -74,4 +74,7 @@ function httpGetAsync()
     font-weight: bold;
     margin: 0px;
 }
+.event-container{
+  border-left:6px solid #dc4405 !important;
+}
 </style>
