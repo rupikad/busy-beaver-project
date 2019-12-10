@@ -83,11 +83,11 @@ function myDataCallback(data){
     // Generating table w stopID + arrival times // 
     if (data.data.length !== 6){ 
 
-        if (data.data.length == 0){
-            for (i = 0 ; i < routeTable.length; i++){
-                // Pass 
-            }
-        } else {            
+        // if (data.data.length == 0){
+        //     for (i = 0 ; i < routeTable.length; i++){
+        //         // Pass 
+        //     }
+        // } else {            
             // etaTable = [];
             for (i = 0; i < data.data.length; i++){
                 // etaTable.push([data.data[i].attributes.stopID, data.data[i].attributes.arrivals[0].eta])
@@ -109,7 +109,7 @@ function myDataCallback(data){
 
             for (j = 0; j < len; j++){
                 etaTable.unshift([ 0 , "No arrival times listed" ]);
-            }
+            // }
         } 
     }
                 // Begin html code to populate table // 
